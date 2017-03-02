@@ -1,0 +1,15 @@
+<% @artwork.images.each do |image| %>
+  <%= image_tag image.inline.urls._1x, width: image.inline.width, height: image.inline.height %>
+<% end %>
+
+<div class='artwork__tombstone'>
+  <h1 class='artwork__tombstone__title'>
+    <%= @artwork.title %>
+  </h1>
+  <div class='artwork__tombstone__year'>
+    <%= @artwork.year %>
+  </div>
+  <div class='artwork__tombstone__dimensions'>
+    <%= @artwork.dimensions %>
+  </div>
+</div>

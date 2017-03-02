@@ -1,0 +1,11 @@
+<% @artworks.each do |artwork| %>
+  <%= link_to "/artworks/#{artwork.slug}" do %>
+    <% if artwork.images.size > 0 %>
+      <% artwork.images.each do |image| %>
+        <%= image_tag image.thumb.urls._1x, width: image.thumb.width, height: image.thumb.height %>
+      <% end %>
+    <% else %>
+      <%= artwork.title %>
+    <% end %>
+  <% end %>
+<% end %>
