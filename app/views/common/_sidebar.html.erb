@@ -1,0 +1,5 @@
+<div class='sidebar'>
+  <% sidebar.each do |artwork| %>
+    <%= link_to artwork.title, "/artworks/#{artwork.slug}" %>
+  <% end %>
+</div>

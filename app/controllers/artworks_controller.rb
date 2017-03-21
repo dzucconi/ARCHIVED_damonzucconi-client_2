@@ -22,6 +22,15 @@ class ArtworksController < ApplicationController
     @artworks = query(IndexQuery, {}, :artworks)
   end
 
+  SidebarQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
+    {
+      sidebar: artworks(state: [SELECTED, PUBLISHED]) {
+        title
+        slug
+      }
+    }
+  GRAPHQL
+
   ShowQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
     query($id: ID!) {
       artwork(id: $id) {
@@ -45,6 +54,7 @@ class ArtworksController < ApplicationController
   GRAPHQL
 
   def show
+    @sidebar = query(SidebarQuery, {}, :sidebar)
     @artwork = query(ShowQuery, { id: params.require(:id) }, :artwork)
   end
 end

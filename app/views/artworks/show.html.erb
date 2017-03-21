@@ -1,3 +1,5 @@
+<%= render 'common/sidebar', sidebar: @sidebar %>
+
 <div class='artwork__images'>
   <% @artwork.images.each do |image| %>
     <%= image_tag image.inline.urls._1x,
