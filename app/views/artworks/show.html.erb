@@ -1,15 +1,27 @@
-<% @artwork.images.each do |image| %>
-  <%= image_tag image.inline.urls._1x, width: image.inline.width, height: image.inline.height %>
-<% end %>
+<div class='artwork__images'>
+  <% @artwork.images.each do |image| %>
+    <%= image_tag image.inline.urls._1x,
+      width: image.inline.width,
+      height: image.inline.height,
+      alt: "Damon Zucconi, #{@artwork.title}, #{@artwork.year}",
+      title: "Damon Zucconi, #{@artwork.title}, #{@artwork.year}" %>
+  <% end %>
+</div>
 
 <div class='artwork__tombstone'>
   <h1 class='artwork__tombstone__title'>
     <%= @artwork.title %>
   </h1>
-  <div class='artwork__tombstone__year'>
-    <%= @artwork.year %>
+
+  <div class='artwork__tombstone__material'>
+    <%= @artwork.material %>
   </div>
+
   <div class='artwork__tombstone__dimensions'>
     <%= @artwork.dimensions %>
+  </div>
+
+  <div class='artwork__tombstone__year'>
+    <%= @artwork.year %>
   </div>
 </div>

@@ -28,6 +28,7 @@ class ArtworksController < ApplicationController
         title
         year
         dimensions
+        material
         images {
           id
           inline: resized(width: 900, height: 900) {

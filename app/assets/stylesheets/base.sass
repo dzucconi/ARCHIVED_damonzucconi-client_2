@@ -1,0 +1,38 @@
+@import 'common'
+
+html
+  box-sizing: border-box
+
+*,
+*:before,
+*:after
+  box-sizing: inherit
+
+body
+  background-color: white
+  color: black
+  font-family: $fontFamily
+  font-size: nth($sizes, 2)
+  line-height: $lineHeight
+
+a,
+a:visited
+  text-decoration: none
+  color: inherit
+
+  &:hover
+    //
+
+p,
+ul,
+section,
+blockquote,
+cite,
+h1,
+h2,
+h3
+  +collapsed-margins(nth($scale, 2))
+
+img
+  display: inline-block
+  vertical-align: bottom

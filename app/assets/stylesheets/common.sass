@@ -1,0 +1,15 @@
+// Units
+$scale: 8px 16px 32px 64px 128px
+$sizes: 11px 15px
+$lineHeight: 1.33
+
+// Typography
+$fontFamily: 'Helvetica Neue', sans-serif
+
+// Mixins
+=collapsed-margins($size)
+  margin: $size auto
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
