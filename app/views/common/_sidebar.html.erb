@@ -1,5 +1,9 @@
 <div class='sidebar'>
   <% sidebar.each do |artwork| %>
-    <%= link_to artwork.title, "/artworks/#{artwork.slug}" %>
+    <%=
+      link_to_unless_current artwork.title, "/artworks/#{artwork.slug}" do
+        content_tag :span, artwork.title
+      end
+    %>
   <% end %>
 </div>

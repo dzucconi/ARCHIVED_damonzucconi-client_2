@@ -1,15 +1,27 @@
 // Units
 $scale: 8px 16px 32px 64px 128px 256px
-$sizes: 11px 15px
+$sizes: 12px 14px 16px
 $lineHeight: 1.33
 
 // Typography
 $fontFamily: 'Helvetica Neue', sans-serif
 
+// Colors
+$blue: #36b
+$purple: #636
+
 // Mixins
-=collapsed-margins($size)
-  margin: $size auto
-  &:first-child
-    margin-top: 0
-  &:last-child
-    margin-bottom: 0
+=collapsed-margins($a, $b: auto)
+  margin: $a $b
+
+  @if $b == 'auto'
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+
+  @else
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0

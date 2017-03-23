@@ -1,13 +1,16 @@
 class ArtworksController < ApplicationController
   IndexQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
-    query {
-      artworks(state: PUBLISHED) {
+    {
+      representations {
+        id
         title
-        slug
+        url
+        mode
         images {
-          thumb: resized(width: 250, height: 250) {
-            height
+          scale
+          thumb: resized(width: 800, height: 800, scale: true) {
             width
+            height
             urls {
               _1x
               _2x
@@ -19,7 +22,7 @@ class ArtworksController < ApplicationController
   GRAPHQL
 
   def index
-    @artworks = query(IndexQuery, {}, :artworks)
+    @representations = query(IndexQuery, {}, :representations)
   end
 
   SidebarQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
