@@ -26,5 +26,10 @@
         </span>
       <% end %>
     <% end %>
+    <% if params[:debug].present? %>
+      <pre>
+        <%= "#{representation.title} | #{representation.id} | #{representation.images&.first&.id}" %>
+      </pre>
+    <% end %>
   <% end %>
 </div>
