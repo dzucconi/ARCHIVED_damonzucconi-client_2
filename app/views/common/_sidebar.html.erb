@@ -1,4 +1,6 @@
 <div class='sidebar'>
+  <%= link_to 'Index', :root %>
+  <hr>
   <% sidebar.each do |artwork| %>
     <%=
       link_to_unless_current artwork.title, "/artworks/#{artwork.slug}" do
