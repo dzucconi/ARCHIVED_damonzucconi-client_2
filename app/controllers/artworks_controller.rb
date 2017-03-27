@@ -4,11 +4,13 @@ class ArtworksController < ApplicationController
       representations {
         id
         title
+        description
         url
         mode
         images {
+          id
           scale
-          thumb: resized(width: 800, height: 800, scale: true) {
+          thumb: resized(width: 480, height: 480, scale: true) {
             width
             height
             urls {
@@ -42,8 +44,33 @@ class ArtworksController < ApplicationController
         dimensions
         material
         images {
-          id
-          inline: resized(width: 900, height: 900) {
+          width
+          height
+          mobile: resized(width: 375, scale: false) {
+            height
+            width
+            urls {
+              _1x
+              _2x
+            }
+          }
+          small: resized(width: 375, height: 375, scale: true) {
+            height
+            width
+            urls {
+              _1x
+              _2x
+            }
+          }
+          medium: resized(width: 750, height: 750, scale: true) {
+            height
+            width
+            urls {
+              _1x
+              _2x
+            }
+          }
+          large: resized(width: 1125, height: 1125, scale: true) {
             height
             width
             urls {

@@ -2,11 +2,24 @@
 
 <div class='artwork__images'>
   <% @artwork.images.each do |image| %>
-    <%= image_tag image.inline.urls._1x,
-      width: image.inline.width,
-      height: image.inline.height,
-      alt: "Damon Zucconi, #{@artwork.title}, #{@artwork.year}",
-      title: "Damon Zucconi, #{@artwork.title}, #{@artwork.year}" %>
+    <picture>
+      <source
+        media='(min-width: <%= image.large.width %>px)'
+        srcset='<%= image.large.urls._1x %> 1x, <%= image.large.urls._2x %> 2x'>
+      <source
+        media='(min-width: <%= image.medium.width %>px)'
+        srcset='<%= image.medium.urls._1x %> 1x, <%= image.medium.urls._2x %> 2x'>
+      <source
+        media='(min-width: <%= image.small.width %>px)'
+        srcset='<%= image.small.urls._1x %> 1x, <%= image.small.urls._2x %> 2x'>
+      <source
+        media='(min-width: <%= image.mobile.width %>px)'
+        srcset='<%= image.mobile.urls._1x %> 1x, <%= image.mobile.urls._2x %> 2x'>
+      <img
+        src='<%= image.medium.urls._1x %>'
+        alt='<%= "Damon Zucconi, #{@artwork.title}, #{@artwork.year}" %>'
+        title='<%= "Damon Zucconi, #{@artwork.title}, #{@artwork.year}" %>'>
+    </picture>
   <% end %>
 </div>
 
