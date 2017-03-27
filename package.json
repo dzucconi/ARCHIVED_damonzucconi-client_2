@@ -1,5 +1,13 @@
 {
   "name": "damonzucconi-client",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-latest": "^6.24.0",
+    "compression-webpack-plugin": "^0.3.2",
+    "path-complete-extname": "^0.1.0",
+    "webpack": "^2.3.2",
+    "webpack-merge": "^4.1.0"
+  }
 }
