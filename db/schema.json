@@ -1684,15 +1684,11 @@
               "name": "mode",
               "description": null,
               "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "ENUM",
-                  "name": "Mode",
-                  "ofType": null
-                }
+                "kind": "ENUM",
+                "name": "Mode",
+                "ofType": null
               },
-              "defaultValue": "[\"BLOCK\"]"
+              "defaultValue": "\"BLOCK\""
             },
             {
               "name": "images",
