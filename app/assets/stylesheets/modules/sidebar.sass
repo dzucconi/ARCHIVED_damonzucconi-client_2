@@ -1,5 +1,24 @@
 @import 'common'
 
+.pull
+  display: block
+  position: fixed
+  top: 0
+  right: 0
+  background-color: black
+  color: white
+  padding: nth($scale, 1) nth($scale, 2)
+  font-size: nth($sizes, 3)
+  cursor: pointer
+  user-select: none
+
+  > span
+    display: block
+    transform: rotate(90deg)
+
+  &:hover > span
+    transform: rotate(-90deg)
+
 .sidebar
   display: none
   position: fixed
