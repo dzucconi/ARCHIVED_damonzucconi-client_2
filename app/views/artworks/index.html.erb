@@ -14,7 +14,16 @@
       <% if representation.images.size > 0 %>
         <% representation.images.each do |image| %>
           <span class='representation__image'>
-            <%= image_tag image.thumb.urls._1x, width: image.thumb.width, height: image.thumb.height %>
+            <picture>
+              <source
+                media='(min-width: <%= image.thumb.width %>px)'
+                srcset='<%= image.thumb.urls._1x %> 1x, <%= image.thumb.urls._2x %> 2x'>
+              <img
+                src='<%= image.thumb.urls._1x %>'
+                alt='<%= [representation.title, representation.description].compact.join('; ') %>'
+                title='<%= representation.title %>'>
+            </picture>
+
             <span class='representation__image__caption'>
               <span><%= representation.title %></span>
             </span>
