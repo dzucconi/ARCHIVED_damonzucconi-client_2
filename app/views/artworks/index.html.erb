@@ -2,9 +2,8 @@
   <% @artworks.each do |artwork| %>
     <%= link_to "/artworks/#{artwork.slug}", class: 'artworks__artwork' do %>
       <% if artwork.images.size > 0 %>
-        <% image = artwork.images.first %>
-        <span class='artworks__artwork__image'>
-          <picture>
+        <% artwork.images.each do |image| %>
+          <picture class='artworks__artwork__image'>
             <source
               media='(min-width: <%= image.thumb.width %>px)'
               srcset='<%= image.thumb.urls._1x %> 1x, <%= image.thumb.urls._2x %> 2x'>
@@ -13,7 +12,7 @@
               alt='<%= artwork.title %>'
               title='<%= artwork.title %>'>
           </picture>
-        </span>
+        <% end %>
       <% else %>
         <span class='artworks__artwork__text'>
           <%= artwork.title %>
