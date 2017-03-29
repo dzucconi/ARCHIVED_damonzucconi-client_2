@@ -33,9 +33,12 @@
       <%= @artwork.material %>
     </div>
 
-    <div class='artwork__tombstone__dimensions'>
-      <%= @artwork.dimensions %>
-    </div>
+    <% if @artwork.dimensions %>
+      <div class='artwork__tombstone__dimensions'>
+        <%= @artwork.dimensions.inches %>
+        (<%= @artwork.dimensions.centimeters %>)
+      </div>
+    <% end %>
 
     <div class='artwork__tombstone__year'>
       <%= @artwork.year %>

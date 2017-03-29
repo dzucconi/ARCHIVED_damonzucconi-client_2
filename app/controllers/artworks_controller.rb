@@ -37,7 +37,14 @@ class ArtworksController < ApplicationController
         title
         description
         year
-        dimensions
+        dimensions {
+          centimeters {
+            to_s
+          }
+          inches {
+            to_s
+          }
+        }
         material
         images {
           width
