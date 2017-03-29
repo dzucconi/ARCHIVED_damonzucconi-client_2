@@ -56,7 +56,8 @@ $sidebar: (width: (nth($scale, 1) * 18))
     span
       display: block
       color: darken(white, 50%)
-      padding: nth($scale, 1)
+      padding: (nth($scale, 1) / 1.25) (nth($scale, 2) / 1.5)
+      +break-word()
 
     span
       background-color: white

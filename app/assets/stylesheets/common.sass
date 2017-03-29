@@ -25,3 +25,13 @@ $purple: #636
       margin-left: 0
     &:last-child
       margin-right: 0
+
+= break-word()
+  word-wrap: break-word
+  word-break: break-word
+  -ms-word-break: break-all
+  overflow-wrap: break-word
+
+=hyphenate()
+  hyphens: auto
+  +break-word()
