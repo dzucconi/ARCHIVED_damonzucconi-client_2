@@ -3,6 +3,9 @@
 $sidebar: (width: (nth($scale, 1) * 18))
 
 .sidebar
+  position: fixed
+  z-index: map-get($z, 'sidebar')
+
   &__toggle
     display: block
     position: fixed
@@ -58,6 +61,10 @@ $sidebar: (width: (nth($scale, 1) * 18))
       color: darken(white, 50%)
       padding: (nth($scale, 1) / 1.25) (nth($scale, 2) / 1.5)
       +break-word()
+
+    a
+      &:hover
+        color: white
 
     span
       background-color: white

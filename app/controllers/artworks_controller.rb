@@ -34,6 +34,8 @@ class ArtworksController < ApplicationController
   ArtworksShowQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
     query($id: ID!) {
       artwork(id: $id) {
+        intent
+        src
         title
         description
         year
@@ -81,6 +83,18 @@ class ArtworksController < ApplicationController
               _2x
             }
           }
+        }
+        links {
+          title
+          url
+          kind
+        }
+        embeds {
+          html
+        }
+        attachments {
+          title
+          url
         }
       }
     }
