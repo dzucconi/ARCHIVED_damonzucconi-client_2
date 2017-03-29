@@ -1,15 +1,17 @@
-<a class='pull'>
-  <span>▲</span>
-</a>
-
 <div class='sidebar'>
-  <%= link_to 'Index', :root %>
-  <hr>
-  <% sidebar.each do |artwork| %>
-    <%=
-      link_to_unless_current artwork.title, "/artworks/#{artwork.slug}" do
-        content_tag :span, artwork.title
-      end
-    %>
-  <% end %>
+  <a class='sidebar__toggle'>
+    <span></span>
+  </a>
+
+  <div class='sidebar__menu'>
+    <%= link_to 'Index', :root %>
+    <hr>
+    <% sidebar.each do |artwork| %>
+      <%=
+        link_to_unless_current artwork.title, "/artworks/#{artwork.slug}" do
+          content_tag :span, artwork.title
+        end
+      %>
+    <% end %>
+  </div>
 </div>

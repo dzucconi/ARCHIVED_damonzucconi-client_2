@@ -1,49 +1,85 @@
 @import 'common'
 
-.pull
-  display: block
-  position: fixed
-  top: 0
-  right: 0
-  background-color: black
-  color: white
-  padding: nth($scale, 1) nth($scale, 2)
-  font-size: nth($sizes, 3)
-  cursor: pointer
-  user-select: none
-
-  > span
-    display: block
-    transform: rotate(90deg)
-
-  &:hover > span
-    transform: rotate(-90deg)
+$sidebar: (width: (nth($scale, 1) * 18))
 
 .sidebar
-  display: none
-  position: fixed
-  top: 0
-  bottom: 0
-  right: 0
-  width: nth($scale, 1) * 18
-  overflow-y: auto
-  -webkit-overflow-scrolling: touch
-  background-color: black
-  text-align: center
-
-  a,
-  span
+  &__toggle
     display: block
-    color: darken(white, 50%)
-    padding: nth($scale, 1)
+    position: fixed
+    top: 0
+    right: 0
+    background-color: black
+    cursor: pointer
+    user-select: none
+    width: nth($scale, 3)
+    height: nth($scale, 3)
 
-  span
-    background-color: white
-    color: black
-    cursor: default
+    > span
+      width: nth($scale, 2)
+      height: 2px
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
 
-  hr
-    height: 1px
-    margin: nth($scale, 1) auto
-    background-color: gray
-    border: none
+      &,
+      &:before,
+      &:after
+        display: block
+        position: absolute
+        background-color: white
+
+      &:before,
+      &:after
+        content: ''
+        width: 100%
+        height: 100%
+
+      &:before
+        top: 200%
+
+      &:after
+        bottom: 200%
+
+  &__menu
+    display: none
+    position: fixed
+    top: 0
+    bottom: 0
+    right: 0
+    width: map-get($sidebar, 'width')
+    overflow-y: auto
+    -webkit-overflow-scrolling: touch
+    background-color: black
+    text-align: center
+
+    a,
+    span
+      display: block
+      color: darken(white, 50%)
+      padding: nth($scale, 1)
+
+    span
+      background-color: white
+      color: black
+      cursor: default
+
+    hr
+      height: 1px
+      margin: nth($scale, 1) auto
+      background-color: darken(white, 75%)
+      border: none
+
+  &--open
+    .sidebar__toggle
+      right: map-get($sidebar, 'width')
+      background-color: white
+
+      > span
+        background-color: black
+
+        &:before,
+        &:after
+          display: none
+
+    .sidebar__menu
+      display: block
