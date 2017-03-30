@@ -1,9 +1,9 @@
-const name = 'sidebar';
+var name = 'sidebar';
 
-const init = () => {
-  const el = document.getElementsByClassName(name)[0];
+var init = function() {
+  var el = document.getElementsByClassName(name)[0];
   el.getElementsByClassName('sidebar__toggle')[0]
-    .addEventListener('click', e => {
+    .addEventListener('click', function(e) {
       e.preventDefault();
       el.classList.toggle('sidebar--open');
     });
