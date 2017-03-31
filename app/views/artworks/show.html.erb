@@ -5,7 +5,7 @@
   <% when 'canonical' %>
     <%= render 'artworks/intents/canonical', artwork: @artwork %>
   <% when 'embed' %>
-    EMBED
+    <%= render 'artworks/intents/embed', artwork: @artwork %>
   <% else %>
     <%= render 'artworks/intents/default', artwork: @artwork %>
   <% end %>
