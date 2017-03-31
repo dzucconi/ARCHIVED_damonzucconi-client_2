@@ -3,9 +3,11 @@
     <%= artwork.title %>
   </h1>
 
-  <div class='artwork__tombstone__material'>
-    <%= artwork.material %>
-  </div>
+  <% if artwork.material %>
+    <div class='artwork__tombstone__material'>
+      <%= artwork.material %>
+    </div>
+  <% end %>
 
   <% if artwork.dimensions %>
     <div class='artwork__tombstone__dimensions'>
@@ -18,7 +20,9 @@
     <%= artwork.year %>
   </div>
 
-  <div class='artwork__tombstone__description'>
-    <%= artwork.description.html_safe %>
-  </div>
+  <% if artwork.description %>
+    <div class='artwork__tombstone__description'>
+      <%= artwork.description.html_safe %>
+    </div>
+  <% end %>
 </div>
