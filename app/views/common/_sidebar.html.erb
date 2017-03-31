@@ -4,14 +4,12 @@
   </a>
 
   <div class='sidebar__menu'>
-    <%= link_to 'Index', :root %>
+    <%= render 'common/nav' %>
+
     <hr>
+
     <% sidebar.each do |artwork| %>
-      <%=
-        link_to_unless_current artwork.title, "/artworks/#{artwork.slug}" do
-          content_tag :span, artwork.title
-        end
-      %>
+      <%= nav_link artwork.title, artwork_path(artwork.slug) %>
     <% end %>
   </div>
 </div>
