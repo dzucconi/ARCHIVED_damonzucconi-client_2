@@ -10,6 +10,14 @@ class RepresentationsController < ApplicationController
         images {
           id
           scale
+          mobile: resized(width: 375, scale: false) {
+            height
+            width
+            urls {
+              _1x
+              _2x
+            }
+          }
           thumb: resized(width: 480, height: 480, scale: true) {
             width
             height

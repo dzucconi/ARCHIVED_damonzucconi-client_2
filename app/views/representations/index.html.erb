@@ -2,9 +2,8 @@
   <h1>
     Damon Zucconi
   </h1>
-  <%= link_to 'Information', '/information' %>
-  <%= link_to 'Subscribe', '/subscribe' %>
-  <%= link_to 'All', '/artworks' %>
+
+  <%= render 'common/nav' %>
 </nav>
 
 <div class='representations'>
@@ -19,6 +18,9 @@
               <source
                 media='(min-width: <%= image.thumb.width %>px)'
                 srcset='<%= image.thumb.urls._1x %> 1x, <%= image.thumb.urls._2x %> 2x'>
+              <source
+                media='(min-width: <%= image.mobile.width %>px)'
+                srcset='<%= image.mobile.urls._1x %> 1x, <%= image.mobile.urls._2x %> 2x'>
               <img
                 src='<%= image.thumb.urls._1x %>'
                 alt='<%= [representation.title, representation.description].compact.join('; ') %>'
