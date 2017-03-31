@@ -37,7 +37,7 @@ class ArtworksController < ApplicationController
         intent
         src
         title
-        description
+        description(format: HTML)
         year
         dimensions {
           centimeters {

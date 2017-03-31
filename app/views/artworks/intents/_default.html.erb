@@ -1,27 +1,3 @@
 <%= render 'artworks/components/images', artwork: artwork %>
 <%= render 'artworks/components/links', artwork: artwork %>
-
-<div class='artwork__tombstone'>
-  <h1 class='artwork__tombstone__title'>
-    <%= artwork.title %>
-  </h1>
-
-  <div class='artwork__tombstone__material'>
-    <%= artwork.material %>
-  </div>
-
-  <% if artwork.dimensions %>
-    <div class='artwork__tombstone__dimensions'>
-      <%= artwork.dimensions.inches %>
-      (<%= artwork.dimensions.centimeters %>)
-    </div>
-  <% end %>
-
-  <div class='artwork__tombstone__year'>
-    <%= artwork.year %>
-  </div>
-
-  <div class='artwork__tombstone__description'>
-    <%= artwork.description %>
-  </div>
-</div>
+<%= render 'artworks/components/tombstone', artwork: artwork %>

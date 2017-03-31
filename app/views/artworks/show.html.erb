@@ -4,6 +4,8 @@
   <% case @artwork.intent %>
   <% when 'canonical' %>
     <%= render 'artworks/intents/canonical', artwork: @artwork %>
+  <% when 'embed' %>
+    EMBED
   <% else %>
     <%= render 'artworks/intents/default', artwork: @artwork %>
   <% end %>
