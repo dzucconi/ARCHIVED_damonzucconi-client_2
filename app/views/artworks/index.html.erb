@@ -1,6 +1,6 @@
 <div class='artworks'>
   <% @artworks.each do |artwork| %>
-    <%= link_to "/artworks/#{artwork.slug}", class: 'artworks__artwork' do %>
+    <%= link_to artwork_path(artwork.slug), class: 'artworks__artwork' do %>
       <% if artwork.images.size > 0 %>
         <% artwork.images.each do |image| %>
           <picture class='artworks__artwork__image'>
