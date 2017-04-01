@@ -95,6 +95,7 @@ class ArtworksController < ApplicationController
         }
         attachments {
           title
+          kind
           url
         }
       }
