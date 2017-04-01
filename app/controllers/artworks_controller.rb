@@ -48,6 +48,7 @@ class ArtworksController < ApplicationController
           }
         }
         material
+        duration
         images {
           width
           height
