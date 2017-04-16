@@ -43,6 +43,13 @@ $sidebar: (width: (nth($scale, 1) * 18))
       &:after
         bottom: 200%
 
+    &:hover
+      > span
+        &,
+        &:before,
+        &:after
+          background-color: gray
+
   &__menu
     display: none
     position: fixed
