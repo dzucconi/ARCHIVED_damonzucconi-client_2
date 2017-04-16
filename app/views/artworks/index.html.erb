@@ -1,3 +1,11 @@
+<nav class='top-nav'>
+  <h1>
+    Damon Zucconi
+  </h1>
+
+  <%= render 'common/nav' %>
+</nav>
+
 <div class='artworks'>
   <% @artworks.each do |artwork| %>
     <%= link_to artwork_path(artwork.slug), class: 'artworks__artwork' do %>
