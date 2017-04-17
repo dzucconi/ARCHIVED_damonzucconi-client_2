@@ -9,7 +9,7 @@ end
 gem 'autoprefixer-rails'
 gem 'graphql-client'
 gem 'puma', '~> 3.7'
-gem 'rails', '~> 5.1.0.beta1'
+gem 'rails', '~> 5.1.0.rc1'
 gem 'sass-rails', github: 'rails/sass-rails'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
