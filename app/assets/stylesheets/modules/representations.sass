@@ -35,6 +35,7 @@
     position: relative
 
     &__caption
+      display: none
       position: absolute
       top: 0
       right: 0
@@ -49,3 +50,7 @@
         left: 0
         padding: nth($scale, 1)
         z-index: 1
+
+  &:hover
+    .representation__image__caption
+      display: block

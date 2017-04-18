@@ -3,8 +3,8 @@ ArtworksIndexQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
     artworks {
       slug
       title
-      images {
-        thumb: resized(width: 100, height: 100) {
+      images(state: PUBLISHED) {
+        thumb: resized(width: 200, height: 200) {
           width
           height
           urls {

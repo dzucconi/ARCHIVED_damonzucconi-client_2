@@ -6,5 +6,5 @@ ENV['NODE_ENV'] ||= ENV['RAILS_ENV']
 BIN_PATH = File.expand_path('.', __dir__)
 
 Dir.chdir(BIN_PATH) do
-  exec "./webpack --watch --progress --color #{ARGV.join(' ')}"
+  exec "./webpack --watch --progress --color #{ARGV.join(" ")}"
 end
