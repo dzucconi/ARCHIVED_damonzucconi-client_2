@@ -1,7 +1,10 @@
 <% if artwork.images.size > 0 %>
   <div class='artwork__images'>
     <% artwork.images.each do |image| %>
-      <picture>
+      <picture
+        class='zoom'
+        data-original='<%= image.url %>'
+      >
         <source
           media='(min-width: <%= image.large.width %>px)'
           srcset='<%= image.large.urls._1x %> 1x, <%= image.large.urls._2x %> 2x'>

@@ -19,6 +19,7 @@ ArtworksShowQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
       images(state: PUBLISHED) {
         width
         height
+        url
         mobile: resized(width: 375, scale: false) {
           height
           width

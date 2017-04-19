@@ -2,6 +2,9 @@ import Turbolinks from 'turbolinks';
 
 Turbolinks.start()
 
-import sidebar from '../modules/sidebar';
+import compose from '../lib/compose';
 
-document.addEventListener('turbolinks:load', sidebar);
+import sidebar from '../modules/sidebar';
+import zoom from '../modules/zoom';
+
+document.addEventListener('turbolinks:load', compose(sidebar, zoom));
