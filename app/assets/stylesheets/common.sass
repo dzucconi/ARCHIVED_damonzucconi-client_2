@@ -3,7 +3,7 @@ $scale: 8px 16px 32px 64px 128px 256px 512px
 $sizes: 12px 14px 16px
 $lineHeight: 1.33
 
-$z: (iframe: 1, sidebar: 10)
+$z: (iframe: 1, sidebar: 10, zoomer: 100)
 
 // Typography
 $fontFamily: 'Helvetica Neue', sans-serif
@@ -28,7 +28,7 @@ $purple: #636
     &:last-child
       margin-right: 0
 
-= break-word()
+=break-word()
   word-wrap: break-word
   word-break: break-word
   -ms-word-break: break-all
@@ -37,3 +37,9 @@ $purple: #636
 =hyphenate()
   hyphens: auto
   +break-word()
+
+@function scale($level)
+  @return nth($scale, $level)
+
+@function z($name)
+  @return map-get($z, $name)
