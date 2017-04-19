@@ -1,10 +1,10 @@
 @import 'common'
 
-$sidebar: (width: (nth($scale, 1) * 18))
+$sidebar: (width: (scale(1) * 18))
 
 .sidebar
   position: fixed
-  z-index: map-get($z, 'sidebar')
+  z-index: z('sidebar')
 
   &__toggle
     display: block
@@ -14,11 +14,11 @@ $sidebar: (width: (nth($scale, 1) * 18))
     background-color: black
     cursor: pointer
     user-select: none
-    width: nth($scale, 4)
-    height: nth($scale, 3)
+    width: scale(4)
+    height: scale(3)
 
     > span
-      width: nth($scale, 2)
+      width: scale(2)
       height: 2px
       top: 50%
       left: 50%
@@ -66,7 +66,7 @@ $sidebar: (width: (nth($scale, 1) * 18))
     span
       display: block
       color: darken(white, 50%)
-      padding: (nth($scale, 1) / 1.25) (nth($scale, 2) / 1.5)
+      padding: (scale(1) / 1.25) (scale(2) / 1.5)
       +break-word()
 
     a
@@ -80,7 +80,7 @@ $sidebar: (width: (nth($scale, 1) * 18))
 
     hr
       height: 1px
-      margin: nth($scale, 1) auto
+      margin: scale(1) auto
       background-color: darken(white, 75%)
       border: none
 
