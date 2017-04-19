@@ -15,8 +15,6 @@ const center = el => {
 const init = () => {
   const el = document.getElementsByClassName(name)[0];
 
-  console.log(el)
-
   if (!el) return;
 
   el.getElementsByClassName(`${name}__toggle`)[0]
