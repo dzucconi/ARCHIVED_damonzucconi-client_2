@@ -4,7 +4,14 @@ Turbolinks.start()
 
 import compose from '../lib/compose';
 
+import loading from '../modules/loading';
 import sidebar from '../modules/sidebar';
 import zoom from '../modules/zoom';
 
-document.addEventListener('turbolinks:load', compose(sidebar, zoom));
+const init = compose(
+  loading,
+  sidebar,
+  zoom
+);
+
+document.addEventListener('turbolinks:load', init);
