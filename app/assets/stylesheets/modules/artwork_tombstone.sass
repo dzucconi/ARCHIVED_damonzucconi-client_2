@@ -3,20 +3,25 @@
 .artwork
   &__tombstone
     width: 100%
-    margin: nth($scale, 3) auto
-    padding: 0 nth($scale, 3)
+    margin: scale(3) auto
+    padding: 0 scale(3)
     text-align: center
 
     &__title
-      font-size: nth($sizes, 2)
+      font-size: size(2)
 
     &__year,
     &__material,
     &__dimensions,
     &__duration,
-    &__description
-      font-size: nth($sizes, 1)
+    &__description,
+    &__src
+      font-size: size(1)
+
+    &__src
+      display: block
+      +ellipsis()
 
     &__description
       margin: 0 auto
-      max-width: nth($scale, 7)
+      max-width: scale(7)
