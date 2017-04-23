@@ -1,4 +1,11 @@
-<%= nav_link 'Home', :root %>
-<%= link_to 'Information', '/information' %>
-<%= link_to 'Subscribe', '/subscribe' %>
+<h1>
+  <% if current_page?(:root) %>
+    Damon Zucconi
+  <% else %>
+    <%= link_to 'Damon Zucconi', :root %>
+  <% end %>
+</h1>
+
+<%= link_to 'Information', information_path %>
+<%= link_to 'Subscribe', subscribe_path %>
 <%= link_to 'All', artworks_path %>
