@@ -1,3 +1,9 @@
 <div class='artwork__canonical'>
+  <a class='artwork__canonical__toggle'></a>
+
+  <div class='artwork__canonical__dropdown'>
+    <%= render 'artworks/components/tombstone', artwork: artwork %>
+  </div>
+
   <iframe src='<%= artwork.src %>' title='<%= artwork.title %>'></iframe>
 </div>
