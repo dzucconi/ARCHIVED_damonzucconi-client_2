@@ -10,4 +10,10 @@ module LinkHelper
   def target(url)
     is_absolute?(url) ? '_blank' : ''
   end
+
+  def prettify_url(url)
+    x = url.gsub(%r{https?://}, '')
+    x = x.chomp('/')
+    x
+  end
 end
