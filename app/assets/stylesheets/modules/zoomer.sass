@@ -14,18 +14,23 @@
     position: absolute
     top: 0
     left: 0
-    width: scale(4)
-    height: scale(4)
+    width: scale(3)
+    height: scale(3)
     text-align: center
     z-index: 1
     cursor: pointer
+    background-color: rgba(black, 0.1)
+    margin: scale(1)
+
+    &:hover
+      background-color: rgba(black, 0.5)
 
     &:before,
     &:after
       content: ''
       display: block
       position: absolute
-      width: 25%
+      width: 50%
       height: 2px
       background-color: white
       top: 50%
