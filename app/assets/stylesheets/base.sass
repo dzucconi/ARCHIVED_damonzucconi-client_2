@@ -12,7 +12,7 @@ body
   background-color: white
   color: black
   font-family: $fontFamily
-  font-size: nth($sizes, 2)
+  font-size: size(2)
   line-height: $lineHeight
 
 a,
@@ -30,7 +30,8 @@ blockquote,
 cite,
 h1,
 h2,
-h3
+h3,
+form
   +collapsed-margins(scale(2))
 
 img
@@ -50,3 +51,14 @@ em
 b,
 strong
   font-weight: bold
+
+input
+  appearance: none
+  +collapsed-margins(scale(1), scale(1))
+  padding: scale(1) scale(2)
+  border: 1px solid gray
+  background-color: white
+  color: black
+  font-family: $fontFamily
+  font-size: size(2)
+  line-height: $lineHeight
