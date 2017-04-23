@@ -38,6 +38,11 @@ $purple: #636
   hyphens: auto
   +break-word()
 
+=ellipsis()
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
 @function scale($level)
   @return nth($scale, $level)
 
