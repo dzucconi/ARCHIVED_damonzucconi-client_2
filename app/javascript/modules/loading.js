@@ -5,7 +5,7 @@ const bind = img =>
     const proxy = dom.tag('img');
     proxy.addEventListener('load', resolve);
     proxy.addEventListener('error', reject);
-    proxy.src = img.src;
+    proxy.src = img.currentSrc || img.src;
   });
 
 const init = () => {
