@@ -21,7 +21,7 @@ const init = () => {
 
   Promise.all(loading)
     .then(() => {
-      document.body.removeChild(indicator);
+      indicator.parentNode.removeChild(indicator);
     });
 };
 
