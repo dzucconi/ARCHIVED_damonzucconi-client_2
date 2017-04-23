@@ -1,4 +1,4 @@
-const name = 'sidebar';
+const name = 'Sidebar';
 
 const center = el => {
   const menu = el.getElementsByClassName(`${name}__menu`)[0];

@@ -1,17 +1,14 @@
-<nav class='top-nav'>
-  <h1>
-    Damon Zucconi
-  </h1>
-
+<nav class='TopNav'>
+  <h1>Damon Zucconi</h1>
   <%= render 'common/nav' %>
 </nav>
 
-<div class='artworks'>
+<div class='Artworks'>
   <% @artworks.each do |artwork| %>
-    <%= link_to artwork_path(artwork.slug), class: 'artworks__artwork' do %>
+    <%= link_to artwork_path(artwork.slug), class: 'Artworks__artwork' do %>
       <% if artwork.images.size > 0 %>
         <% artwork.images.each do |image| %>
-          <picture class='artworks__artwork__image'>
+          <picture class='Artworks__artwork__image'>
             <source
               media='(min-width: <%= image.thumb.width %>px)'
               srcset='<%= image.thumb.urls._1x %> 1x, <%= image.thumb.urls._2x %> 2x'>
@@ -24,7 +21,7 @@
           </picture>
         <% end %>
       <% else %>
-        <span class='artworks__artwork__text'>
+        <span class='Artworks__artwork__text'>
           <%= artwork.title %>
         </span>
       <% end %>

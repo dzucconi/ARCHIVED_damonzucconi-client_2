@@ -1,27 +1,26 @@
 @import 'common'
 
-.artwork
-  &__tombstone
-    width: 100%
-    margin: scale(3) auto
-    padding: 0 scale(3)
-    text-align: center
+.ArtworkTombstone
+  width: 100%
+  margin: scale(3) auto
+  padding: 0 scale(3)
+  text-align: center
 
-    &__title
-      font-size: size(2)
+  &__title
+    font-size: size(2)
 
-    &__year,
-    &__material,
-    &__dimensions,
-    &__duration,
-    &__description,
-    &__src
-      font-size: size(1)
+  &__year,
+  &__material,
+  &__dimensions,
+  &__duration,
+  &__description,
+  &__src
+    font-size: size(1)
 
-    &__src
-      display: block
-      +ellipsis()
+  &__src
+    display: block
+    +ellipsis()
 
-    &__description
-      margin: 0 auto
-      max-width: scale(7)
+  &__description
+    margin: 0 auto
+    max-width: scale(7)

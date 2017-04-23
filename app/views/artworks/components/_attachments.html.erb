@@ -1,5 +1,5 @@
 <% if artwork.attachments.size > 0 %>
-  <div class='artwork__attachments'>
+  <div class='ArtworkAttachments'>
     <% artwork.attachments.each do |attachment| %>
       <%= link_to attachment.title || "Download #{attachment.kind}", attachment.url, target: '_blank' %>
     <% end %>

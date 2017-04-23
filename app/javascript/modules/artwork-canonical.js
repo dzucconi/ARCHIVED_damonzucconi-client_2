@@ -1,4 +1,4 @@
-const name = 'artwork__canonical';
+const name = 'ArtworkCanonical';
 
 const init = () => {
   const el = document.getElementsByClassName(name)[0];

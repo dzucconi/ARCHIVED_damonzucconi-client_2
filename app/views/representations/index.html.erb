@@ -1,19 +1,16 @@
-<nav class='top-nav'>
-  <h1>
-    Damon Zucconi
-  </h1>
-
+<nav class='TopNav'>
+  <h1>Damon Zucconi</h1>
   <%= render 'common/nav' %>
 </nav>
 
-<div class='representations'>
+<div class='Representations'>
   <% @representations.each do |representation| %>
     <%= link_to representation.url,
-      class: "representation representation--#{path_type(representation.url)} representation--#{representation.mode} representation--#{representation.images.size > 0 ? 'images' : 'text'}",
+      class: "Representation Representation--#{path_type(representation.url)} Representation--#{representation.mode} Representation--#{representation.images.size > 0 ? 'images' : 'text'}",
       target: target(representation.url) do %>
       <% if representation.images.size > 0 %>
         <% representation.images.each do |image| %>
-          <span class='representation__image'>
+          <span class='Representation__image'>
             <picture>
               <source
                 media='(min-width: <%= image.thumb.width %>px)'
@@ -27,13 +24,13 @@
                 title='<%= representation.title %>'>
             </picture>
 
-            <span class='representation__image__caption'>
+            <span class='Representation__image__caption'>
               <span><%= representation.title %></span>
             </span>
           </span>
         <% end %>
       <% else %>
-        <span class='representation__text'>
+        <span class='Representation__text'>
           <%= representation.title %>
         </span>
       <% end %>

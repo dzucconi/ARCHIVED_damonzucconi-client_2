@@ -2,7 +2,7 @@
 
 $sidebar: (width: (scale(1) * 18))
 
-.sidebar
+.Sidebar
   position: fixed
   z-index: z('sidebar')
 
@@ -85,7 +85,7 @@ $sidebar: (width: (scale(1) * 18))
       border: none
 
   &--open
-    .sidebar__toggle
+    .Sidebar__toggle
       right: map-get($sidebar, 'width')
       background-color: white
 
@@ -96,5 +96,5 @@ $sidebar: (width: (scale(1) * 18))
         &:after
           display: none
 
-    .sidebar__menu
+    .Sidebar__menu
       display: block

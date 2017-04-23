@@ -1,7 +1,7 @@
 import OpenSeadragon from 'openseadragon';
 import * as dom from '../lib/dom';
 
-const name = 'zoom'
+const name = 'Zoom'
 
 const bind = picture => {
   picture.addEventListener('click', e => {
@@ -9,9 +9,9 @@ const bind = picture => {
 
     const url = e.currentTarget.dataset.original;
 
-    const el = dom.tag('div', { klass: 'zoomer' }, `
-      <div class='zoomer__close js-close'></div>
-      <div class='zoomer__indicator js-indicator'></div>
+    const el = dom.tag('div', { klass: 'Zoomer' }, `
+      <div class='Zoomer__close js-close'></div>
+      <div class='Zoomer__indicator js-indicator'></div>
     `);
 
     document.body.appendChild(el);

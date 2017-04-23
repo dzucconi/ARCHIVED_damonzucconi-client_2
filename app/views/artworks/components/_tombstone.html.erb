@@ -1,40 +1,40 @@
-<div class='artwork__tombstone'>
-  <h1 class='artwork__tombstone__title'>
+<div class='ArtworkTombstone'>
+  <h1 class='ArtworkTombstone__title'>
     <%= artwork.title %>
   </h1>
 
   <% if artwork.material %>
-    <div class='artwork__tombstone__material'>
+    <div class='ArtworkTombstone__material'>
       <%= artwork.material %>
     </div>
   <% end %>
 
   <% if artwork.dimensions %>
-    <div class='artwork__tombstone__dimensions'>
+    <div class='ArtworkTombstone__dimensions'>
       <%= artwork.dimensions.inches %>
       (<%= artwork.dimensions.centimeters %>)
     </div>
   <% end %>
 
   <% if artwork.duration %>
-    <div class='artwork__tombstone__duration'>
+    <div class='ArtworkTombstone__duration'>
       <%= artwork.duration %>
     </div>
   <% end %>
 
-  <div class='artwork__tombstone__year'>
+  <div class='ArtworkTombstone__year'>
     <%= artwork.year %>
   </div>
 
   <% if artwork.description %>
-    <div class='artwork__tombstone__description'>
+    <div class='ArtworkTombstone__description'>
       <%= artwork.description.html_safe %>
     </div>
   <% end %>
 
   <% if artwork.src %>
     <a
-      class='artwork__tombstone__src'
+      class='ArtworkTombstone__src'
       title='<%= artwork.src %>'
       href='<%= artwork.src %>'
       target='_blank'
