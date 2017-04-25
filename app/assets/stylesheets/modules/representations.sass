@@ -6,15 +6,9 @@
 .Representation
   //
 
-  &--absolute
-    //
-
-  &--text
-    //
-
   &--block
     display: block
-    text-align: left
+    text-align: center
     +collapsed-margins(scale(3))
 
   &--inline
@@ -24,7 +18,6 @@
 
   &__text
     font-size: size(3)
-
     &:hover
       text-decoration: none
 
@@ -35,3 +28,9 @@
     &__caption
       font-size: size(1)
       margin: scale(1)
+
+@media(max-width: 600px)
+  .Representation
+    &--inline
+      display: block
+      +collapsed-margins(scale(3))
