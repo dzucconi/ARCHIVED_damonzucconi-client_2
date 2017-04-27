@@ -1,0 +1,41 @@
+<table class='Index'>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Material</th>
+      <th>Dimensions</th>
+      <th>External URL</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artworks.each do |artwork| %>
+      <tr>
+        <td>
+          <%= link_to artwork.title, artwork_path(artwork.slug) %>
+        </td>
+        <td>
+          <% if artwork.material %>
+            <%= link_to artwork.material, artwork_path(artwork.slug) %>
+          <% end %>
+        </td>
+        <td>
+          <% if artwork.dimensions %>
+            <%= link_to artwork_path(artwork.slug) do %>
+              <%= artwork.dimensions.inches %> (<%= artwork.dimensions.centimeters %>)
+            <% end %>
+          <% end %>
+        </td>
+        <td>
+          <% if artwork.src %>
+            <%= link_to truncate(prettify_url(artwork.src)), artwork.src, target: '_blank' %>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to artwork.year, artwork_path(artwork.slug) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

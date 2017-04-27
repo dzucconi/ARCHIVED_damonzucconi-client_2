@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :representations, only: [:index]
   resources :artworks, only: [:index, :show]
+  resources :index, only: [:index]
 
   get 'information' => 'pages#information'
   get 'subscribe' => 'pages#subscribe'
