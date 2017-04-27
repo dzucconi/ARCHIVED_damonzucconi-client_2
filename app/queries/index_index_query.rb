@@ -1,11 +1,11 @@
 IndexIndexQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
   {
-    exhibitions {
+    exhibitions(state: [SELECTED, PUBLISHED]) {
       slug
       title
     }
 
-    artworks {
+    artworks(state: [SELECTED, PUBLISHED]) {
       slug
       src
       title
