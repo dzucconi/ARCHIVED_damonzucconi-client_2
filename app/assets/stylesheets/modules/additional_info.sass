@@ -1,5 +1,7 @@
 @import 'common'
 
+$additionalInfo: (dot_size: 2px)
+
 .AdditionalInfo
   position: relative
 
@@ -13,24 +15,37 @@
     height: scale(3)
     z-index: z('sidebar')
 
-    &:after
-      display: block
-      content: ''
-      position: absolute
-      width: 0
-      height: 0
+    > span
+      width: map-get($additionalInfo, 'dot_size')
+      height: map-get($additionalInfo, 'dot_size')
       top: 50%
       left: 50%
       transform: translate(-50%, -50%)
-      margin-top: (scale(1) / 3)
-      border: (scale(1) / 1.5) solid black
-      border-top-width: scale(1)
-      border-bottom-color: transparent
-      border-left-color: transparent
-      border-right-color: transparent
 
-    &:hover:after
-      border-top-color: gray
+      &,
+      &:before,
+      &:after
+        display: block
+        position: absolute
+        background-color: black
+
+      &:before,
+      &:after
+        content: ''
+        width: map-get($additionalInfo, 'dot_size')
+        height: 100%
+
+      &:before
+        right: map-get($additionalInfo, 'dot_size') * 2
+
+      &:after
+        left: map-get($additionalInfo, 'dot_size') * 2
+
+    &:hover > span
+      &,
+      &:before,
+      &:after
+        background-color: gray
 
   &__dropdown
     display: none
@@ -56,7 +71,13 @@
 
   &--open
     .AdditionalInfo__toggle
-      transform: rotate(180deg)
+      background-color: black
+
+      > span
+        &,
+        &:before,
+        &:after
+          background-color: white
 
     .AdditionalInfo__dropdown
       display: block
