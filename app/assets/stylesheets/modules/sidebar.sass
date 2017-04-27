@@ -1,10 +1,15 @@
 @import 'common'
 
-$sidebar: (width: (scale(1) * 18))
+$sidebar: (width: (scale(1) * 18), toggle_width: scale(4))
 
 .Sidebar
   position: fixed
   z-index: z('sidebar')
+
+  &__supplemental
+    position: fixed
+    top: 0
+    right: map-get($sidebar, 'toggle_width')
 
   &__toggle
     display: block
@@ -14,7 +19,7 @@ $sidebar: (width: (scale(1) * 18))
     background-color: black
     cursor: pointer
     user-select: none
-    width: scale(4)
+    width: map-get($sidebar, 'toggle_width')
     height: scale(3)
 
     > span
@@ -88,6 +93,9 @@ $sidebar: (width: (scale(1) * 18))
       border: none
 
   &--open
+    .Sidebar__supplemental
+      right: map-get($sidebar, 'width') + map-get($sidebar, 'toggle_width')
+
     .Sidebar__toggle
       right: map-get($sidebar, 'width')
       background-color: white

@@ -7,13 +7,13 @@ import compose from '../lib/compose';
 import loading from '../modules/loading';
 import sidebar from '../modules/sidebar';
 import zoom from '../modules/zoom';
-import artwork_canonical from '../modules/artwork-canonical';
+import additionalInfo from '../modules/additional_info';
 
 const init = compose(
   loading,
   sidebar,
   zoom,
-  artwork_canonical
+  additionalInfo
 );
 
 document.addEventListener('turbolinks:load', init);

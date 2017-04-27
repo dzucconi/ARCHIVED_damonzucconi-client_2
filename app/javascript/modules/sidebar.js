@@ -1,4 +1,7 @@
+import Cookies from 'js-cookie';
+
 const name = 'Sidebar';
+const state = `${name}--open`;
 
 const center = el => {
   const menu = el.getElementsByClassName(`${name}__menu`)[0];
@@ -17,10 +20,18 @@ const init = () => {
 
   if (!el) return;
 
+  center(el);
+
   el.getElementsByClassName(`${name}__toggle`)[0]
     .addEventListener('click', e => {
       e.preventDefault();
-      el.classList.toggle(`${name}--open`);
+
+      const isOpen = el.classList.contains(state);
+
+      Cookies.set(state, !isOpen);
+
+      el.classList.toggle(state);
+
       center(el);
     });
 };

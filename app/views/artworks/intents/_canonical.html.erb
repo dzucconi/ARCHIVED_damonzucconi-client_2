@@ -1,9 +1,13 @@
-<div class='ArtworkCanonical'>
-  <a class='ArtworkCanonical__toggle'></a>
+<% content_for :sidebar do %>
+  <div class='AdditionalInfo'>
+    <a class='AdditionalInfo__toggle'></a>
 
-  <div class='ArtworkCanonical__dropdown'>
-    <%= render 'artworks/components/tombstone', artwork: artwork %>
+    <div class='AdditionalInfo__dropdown'>
+      <%= render 'artworks/components/tombstone', artwork: artwork %>
+    </div>
   </div>
+<% end %>
 
+<div class='ArtworkCanonical'>
   <iframe src='<%= artwork.src %>' title='<%= artwork.title %>'></iframe>
 </div>

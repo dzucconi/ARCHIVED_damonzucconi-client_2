@@ -1,60 +1,6 @@
 @import 'common'
 
 .ArtworkCanonical
-  &__toggle
-    display: block
-    position: fixed
-    bottom: 0
-    left: 0
-    background-color: white
-    cursor: pointer
-    user-select: none
-    width: scale(3)
-    height: scale(3)
-    z-index: z('sidebar')
-
-    &:after
-      display: block
-      content: ''
-      position: absolute
-      width: 0
-      height: 0
-      top: 50%
-      left: 50%
-      transform: translate(-50%, -50%)
-      margin-top: -(scale(1) / 3)
-      border: (scale(1) / 1.5) solid black
-      border-bottom-width: scale(1)
-      border-top-color: transparent
-      border-left-color: transparent
-      border-right-color: transparent
-
-    &:hover:after
-      border-bottom-color: gray
-
-  &__dropdown
-    display: none
-    position: fixed
-    bottom: 0
-    left: 0
-    max-width: scale(6)
-    padding: 0 scale(1)
-    background-color: white
-    z-index: z('sidebar') - 1
-
-    // Overrides to tombstone component
-    .ArtworkTombstone
-      margin: 0
-      padding: scale(1) scale(3)
-      text-align: left
-
-      &__title
-        font-size: size(1)
-        margin: 0
-
-      &__description
-        +collapsed-margins(scale(1))
-
   > iframe
     position: fixed
     top: 0
@@ -62,10 +8,3 @@
     width: 100%
     height: 100%
     z-index: z('canonical')
-
-  &--open
-    .ArtworkCanonical__toggle
-      transform: rotate(180deg)
-
-    .ArtworkCanonical__dropdown
-      display: block

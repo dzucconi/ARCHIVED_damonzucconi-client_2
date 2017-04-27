@@ -1,4 +1,10 @@
-<div class='Sidebar'>
+<div class='Sidebar <%= sidebar_state %>'>
+  <% if content_for? :sidebar %>
+    <div class='Sidebar__supplemental'>
+      <%= content_for :sidebar %>
+    </div>
+  <% end %>
+
   <a class='Sidebar__toggle'>
     <span></span>
   </a>
