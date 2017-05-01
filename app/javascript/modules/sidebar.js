@@ -22,6 +22,15 @@ const init = () => {
 
   center(el);
 
+  const menu = el.getElementsByClassName(`${name}__menu`)[0];
+  const links = menu.getElementsByTagName('a');
+
+  Array.prototype.map.call(links, link => {
+    link.addEventListener('click', () => {
+      link.classList.add(`${name}__menu__link--clicked`);
+    })
+  });
+
   el.getElementsByClassName(`${name}__toggle`)[0]
     .addEventListener('click', e => {
       e.preventDefault();

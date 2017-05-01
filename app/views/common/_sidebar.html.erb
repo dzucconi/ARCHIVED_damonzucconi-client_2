@@ -15,7 +15,7 @@
     <hr>
 
     <% sidebar.each do |artwork| %>
-      <%= nav_link artwork.title, artwork_path(artwork.slug) %>
+      <%= nav_link artwork.title, artwork_path(artwork.slug), class: 'Sidebar__menu__link' %>
     <% end %>
   </div>
 </div>
