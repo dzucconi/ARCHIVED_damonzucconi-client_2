@@ -97,6 +97,9 @@ $sidebar: (width: (scale(1) * 18), toggle_width: scale(4))
         background-color: white
         color: black !important
 
+      &--deactivating
+        background-color: gray !important
+
   &--open
     .Sidebar__supplemental
       right: map-get($sidebar, 'width') + map-get($sidebar, 'toggle_width')

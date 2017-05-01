@@ -28,6 +28,9 @@ const init = () => {
   Array.prototype.map.call(links, link => {
     link.addEventListener('click', () => {
       link.classList.add(`${name}__menu__link--clicked`);
+
+      const active = menu.getElementsByTagName('span')[0];
+      active.classList.add(`${name}__menu__link--deactivating`);
     })
   });
 
