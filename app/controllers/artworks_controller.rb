@@ -1,5 +1,6 @@
 class ArtworksController < ApplicationController
   def index
+    @sidebar = query(SidebarQuery, {}, :sidebar)
     @artworks = query(ArtworksIndexQuery, {}, :artworks)
   end
 
