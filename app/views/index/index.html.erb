@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Description</th>
       <th>Material</th>
       <th>Dimensions</th>
       <th>External URL</th>
@@ -18,20 +19,31 @@
           <%= link_to artwork.title, artwork_path(artwork.slug) %>
         </td>
         <td>
-          <% if artwork.material %>
-            <%= link_to artwork.material, artwork_path(artwork.slug) %>
+          <%= link_to artwork_path(artwork.slug) do %>
+            <% if artwork.description %>
+              <%= artwork.description.html_safe %>
+            <% else %>
+              —
+            <% end %>
           <% end %>
         </td>
         <td>
-          <% if artwork.dimensions %>
-            <%= link_to artwork_path(artwork.slug) do %>
+          <%= link_to artwork.material || '—', artwork_path(artwork.slug) %>
+        </td>
+        <td>
+          <%= link_to artwork_path(artwork.slug) do %>
+            <% if artwork.dimensions %>
               <%= artwork.dimensions.inches %> (<%= artwork.dimensions.centimeters %>)
+            <% else %>
+              —
             <% end %>
           <% end %>
         </td>
         <td>
           <% if artwork.src %>
             <%= link_to truncate(prettify_url(artwork.src)), artwork.src, target: '_blank' %>
+          <% else %>
+            <%= link_to '—', artwork_path(artwork.slug) %>
           <% end %>
         </td>
         <td>

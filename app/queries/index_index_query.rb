@@ -11,6 +11,7 @@ IndexIndexQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
       title
       year
       material
+      description(format: HTML)
       dimensions {
         inches {
           to_s
