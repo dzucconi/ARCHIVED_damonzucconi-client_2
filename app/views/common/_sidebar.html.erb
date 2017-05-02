@@ -10,7 +10,10 @@
   </a>
 
   <div class='Sidebar__menu'>
-    <%= render 'common/nav' %>
+    <%= nav_link 'Damon Zucconi', :root, class: 'Sidebar__menu__link' %>
+    <%= nav_link 'Information', information_path, class: 'Sidebar__menu__link' %>
+    <%= nav_link 'Subscribe', subscribe_path, class: 'Sidebar__menu__link' %>
+    <%= nav_link 'All', artworks_path, class: 'Sidebar__menu__link' %>
 
     <hr>
 
