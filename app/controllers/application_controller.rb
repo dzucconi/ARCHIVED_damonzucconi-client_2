@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :sidebar
 
   class QueryError < StandardError; end
 
@@ -12,5 +13,9 @@ class ApplicationController < ActionController::Base
     else
       res.data.values_at(*attributes)
     end
+  end
+
+  def sidebar
+    @sidebar = query(SidebarQuery, {}, :sidebar)
   end
 end
