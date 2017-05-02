@@ -1,11 +1,7 @@
 <h1>
-  <% if current_page?(:root) %>
-    Damon Zucconi
-  <% else %>
-    <%= link_to 'Damon Zucconi', :root %>
-  <% end %>
+  <%= nav_link 'Damon Zucconi', :root %>
 </h1>
 
-<%= link_to 'Information', information_path %>
-<%= link_to 'Subscribe', subscribe_path %>
-<%= link_to 'All', artworks_path %>
+<%= nav_link 'Information', information_path %>
+<%= nav_link 'Subscribe', subscribe_path %>
+<%= nav_link 'All', artworks_path %>
