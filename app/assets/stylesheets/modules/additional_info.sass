@@ -1,6 +1,6 @@
 @import 'common'
 
-$additionalInfo: (dot_size: 2px)
+$additionalInfo: (dot_size: 2px, toggle_width: scale(4))
 
 .AdditionalInfo
   position: relative
@@ -11,7 +11,7 @@ $additionalInfo: (dot_size: 2px)
     background-color: white
     cursor: pointer
     user-select: none
-    width: scale(3)
+    width: map-get($additionalInfo, 'toggle_width')
     height: scale(3)
     z-index: z('sidebar')
 
@@ -52,14 +52,14 @@ $additionalInfo: (dot_size: 2px)
     position: absolute
     top: 0
     right: 0
-    width: scale(6)
+    width: scale(6) + map-get($additionalInfo, 'toggle_width')
     padding: 0 scale(1)
     background-color: white
 
     // Overrides to tombstone component
     .ArtworkTombstone
       margin: 0
-      padding: scale(1) scale(3) scale(1) scale(1)
+      padding: scale(1) map-get($additionalInfo, 'toggle_width') scale(1) scale(1)
       text-align: left
 
       &__title
