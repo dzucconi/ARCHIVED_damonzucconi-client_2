@@ -1,0 +1,17 @@
+<%= render 'common/top_nav' %>
+
+<div class='Page'>
+  <% if @message.present? %>
+    <p><%= @message %></p>
+  <% end %>
+
+  <p>
+    The nearest valid paths from here are
+  </p>
+
+  <p>
+    <% @nearest.ranked.take(10).each do |scored| %>
+      <%= link_to "Distance of #{scored.distance} @ #{scored.path}", scored.path %><br>
+    <% end %>
+  </p>
+</div>
