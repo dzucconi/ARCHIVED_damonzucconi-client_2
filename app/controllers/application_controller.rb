@@ -4,8 +4,10 @@ class ApplicationController < ActionController::Base
 
   class QueryExecutionError < StandardError; end
 
-  rescue_from QueryExecutionError, with: :not_found
-  rescue_from ActionController::RoutingError, with: :not_found
+  unless Rails.application.config.consider_all_requests_local
+    rescue_from QueryExecutionError, with: :not_found
+    rescue_from ActionController::RoutingError, with: :not_found
+  end
 
   private
 
