@@ -1,3 +1,5 @@
+<%= content_for :title { @artwork.title.html_safe } %>
+
 <div class='Artwork'>
   <% case @artwork.intent %>
   <% when 'canonical' %>

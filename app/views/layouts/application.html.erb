@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Damon Zucconi</title>
+    <title><%= [content_for(:title), 'Damon Zucconi'].compact.join(' / ') %></title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
