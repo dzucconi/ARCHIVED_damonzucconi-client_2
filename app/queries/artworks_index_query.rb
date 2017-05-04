@@ -1,6 +1,6 @@
 ArtworksIndexQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
-  {
-    artworks(state: [SELECTED, PUBLISHED]) {
+  query($state: [State]) {
+    artworks(state: $state) {
       slug
       title
       images(state: PUBLISHED, limit: 1) {
