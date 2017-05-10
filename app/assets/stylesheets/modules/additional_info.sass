@@ -1,6 +1,6 @@
 @import 'common'
 
-$additionalInfo: (dot_size: 2px, toggle_width: scale(4))
+$additionalInfo: (dot_size: 2px, toggle_width: scale(4), toggle_height: scale(3))
 
 .AdditionalInfo
   position: relative
@@ -12,7 +12,7 @@ $additionalInfo: (dot_size: 2px, toggle_width: scale(4))
     cursor: pointer
     user-select: none
     width: map-get($additionalInfo, 'toggle_width')
-    height: scale(3)
+    height: map-get($additionalInfo, 'toggle_height')
     z-index: z('sidebar')
 
     > span
@@ -81,3 +81,11 @@ $additionalInfo: (dot_size: 2px, toggle_width: scale(4))
 
     .AdditionalInfo__dropdown
       display: block
+
+  +mobile()
+    &__dropdown
+      top: map-get($additionalInfo, 'toggle_height')
+      right: -(map-get($additionalInfo, 'toggle_width'))
+
+      .ArtworkTombstone
+        padding: scale(1)

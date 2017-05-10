@@ -36,6 +36,7 @@ form
 
 img
   display: inline-block
+  max-width: 100%
   vertical-align: bottom
   background-color: lighten(black, 95%)
 
@@ -63,3 +64,9 @@ input
   font-family: $fontFamily
   font-size: size(2)
   line-height: $lineHeight
+  border-radius: 0
+
+  +mobile()
+    display: block
+    width: 100%
+    +collapsed-margins(scale(1))

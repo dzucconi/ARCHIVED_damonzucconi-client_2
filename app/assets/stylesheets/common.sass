@@ -51,3 +51,9 @@ $purple: #636
 
 @function size($size)
   @return nth($sizes, $size)
+
+$mobileBreakpoint: 600px
+
+=mobile()
+  @media (max-width: #{$mobileBreakpoint - 1px})
+    @content
