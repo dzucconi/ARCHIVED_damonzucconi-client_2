@@ -1,6 +1,10 @@
 SidebarQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
   {
-    sidebar: artworks(state: [SELECTED, PUBLISHED]) {
+    artworks(state: [SELECTED, PUBLISHED]) {
+      title
+      slug
+    }
+    exhibitions(state: [SELECTED, PUBLISHED]) {
       title
       slug
     }

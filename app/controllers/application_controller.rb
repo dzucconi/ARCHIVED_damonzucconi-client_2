@@ -33,6 +33,7 @@ class ApplicationController < ActionController::Base
   end
 
   def sidebar
-    @sidebar = query(SidebarQuery, {}, :sidebar)
+    artworks, exhibitions = query(SidebarQuery, {}, :artworks, :exhibitions)
+    @sidebar = Sidebar.new(artworks, exhibitions)
   end
 end
