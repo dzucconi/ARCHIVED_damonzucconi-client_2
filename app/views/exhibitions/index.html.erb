@@ -1,0 +1,29 @@
+<%= content_for :title { 'Exhibitions' } %>
+
+<%= render 'common/top_nav' %>
+
+<div class='Exhibitions'>
+  <% @exhibitions.each do |exhibition| %>
+    <%= link_to exhibition_path(exhibition.slug), class: 'Exhibitions__exhibition' do %>
+      <% if exhibition.images.size > 0 %>
+        <% exhibition.images.each do |image| %>
+          <picture class='Exhibitions__exhibition__image'>
+            <source
+              media='(min-width: <%= image.thumb.width %>px)'
+              srcset='<%= image.thumb.urls._1x %> 1x, <%= image.thumb.urls._2x %> 2x'>
+            <img
+              src='<%= image.thumb.urls._1x %>'
+              alt='<%= exhibition.title %>'
+              title='<%= exhibition.title %>'
+              width='<%= image.thumb.width %>'
+              height='<%= image.thumb.height %>'>
+          </picture>
+        <% end %>
+      <% else %>
+        <span class='Exhibitions__exhibition__text'>
+          <%= exhibition.title %>
+        </span>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>

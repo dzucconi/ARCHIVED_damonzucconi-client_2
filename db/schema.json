@@ -1568,7 +1568,16 @@
               "name": "description",
               "description": null,
               "args": [
-
+                {
+                  "name": "format",
+                  "description": null,
+                  "type": {
+                    "kind": "ENUM",
+                    "name": "Format",
+                    "ofType": null
+                  },
+                  "defaultValue": "\"PLAIN\""
+                }
               ],
               "type": {
                 "kind": "SCALAR",
@@ -1582,7 +1591,16 @@
               "name": "end_date",
               "description": null,
               "args": [
-
+                {
+                  "name": "format",
+                  "description": null,
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                }
               ],
               "type": {
                 "kind": "SCALAR",
@@ -1693,7 +1711,16 @@
               "name": "start_date",
               "description": null,
               "args": [
-
+                {
+                  "name": "format",
+                  "description": null,
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                }
               ],
               "type": {
                 "kind": "SCALAR",

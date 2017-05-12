@@ -1,0 +1,24 @@
+@import 'common'
+
+.ExhibitionTombstone
+  margin: nth($scale, 3)
+  text-align: center
+
+  &__title
+    font-size: size(2)
+
+  &__venue,
+  &__date,
+  &__location,
+  &__description
+    font-size: size(1)
+
+  &__venue,
+  &__date,
+  &__location
+    //
+
+  &__description
+    max-width: scale(7)
+    text-align: left
+    +collapsed-margins(scale(1))

@@ -1,0 +1,26 @@
+<div class='ExhibitionTombstone'>
+  <h1 class='ExhibitionTombstone__title'>
+    <%= exhibition.title %>
+  </h1>
+
+  <div class='ExhibitionTombstone__venue'>
+    <%= link_to exhibition.venue, exhibition.external_url, target: '_blank' %>
+  </div>
+
+  <div class='ExhibitionTombstone__location'>
+    <%= exhibition.city %>, <%= exhibition.country %>
+  </div>
+
+  <div class='ExhibitionTombstone__date'>
+    <% if exhibition.start_year != exhibition.end_year %>
+      <%= exhibition.start_date %>, <%= exhibition.start_year %>
+    <% else %>
+      <%= exhibition.start_date %>
+    <% end %>
+    – <%= exhibition.end_date %>, <%= exhibition.end_year %>
+  </div>
+
+  <div class='ExhibitionTombstone__description'>
+    <%= exhibition.description.html_safe %>
+  </div>
+</div>

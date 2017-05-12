@@ -1,0 +1,6 @@
+<%= content_for :title { @exhibition.title.html_safe } %>
+
+<div class='Exhibition'>
+  <%= render 'exhibitions/components/tombstone', exhibition: @exhibition %>
+  <%= render 'exhibitions/components/images', exhibition: @exhibition %>
+</div>

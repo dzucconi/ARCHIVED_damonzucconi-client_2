@@ -1,0 +1,8 @@
+<% if exhibition.images.size > 0 %>
+  <div class='Images'>
+    <% exhibition.images.each do |image| %>
+      <%= render 'common/picture',
+        image: image, title: "Damon Zucconi, #{exhibition.title}" %>
+    <% end %>
+  </div>
+<% end %>
