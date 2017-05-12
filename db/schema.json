@@ -57,7 +57,7 @@
                       "ofType": null
                     }
                   },
-                  "defaultValue": "[\"DRAFT\",\"PUBLISHED\",\"ARCHIVED\",\"SELECTED\"]"
+                  "defaultValue": "[\"DRAFT\", \"PUBLISHED\", \"ARCHIVED\", \"SELECTED\"]"
                 }
               ],
               "type": {
@@ -115,7 +115,7 @@
                       "ofType": null
                     }
                   },
-                  "defaultValue": "[\"DRAFT\",\"PUBLISHED\",\"ARCHIVED\",\"SELECTED\"]"
+                  "defaultValue": "[\"DRAFT\", \"PUBLISHED\", \"ARCHIVED\", \"SELECTED\"]"
                 }
               ],
               "type": {
@@ -761,6 +761,29 @@
               "deprecationReason": null
             },
             {
+              "name": "created_at",
+              "description": null,
+              "args": [
+                {
+                  "name": "format",
+                  "description": null,
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "depth",
               "description": null,
               "args": [
@@ -786,7 +809,7 @@
                     "name": "Format",
                     "ofType": null
                   },
-                  "defaultValue": "\"PLAIN\""
+                  "defaultValue": "PLAIN"
                 }
               ],
               "type": {
@@ -901,7 +924,7 @@
                       "ofType": null
                     }
                   },
-                  "defaultValue": "[\"DRAFT\",\"PUBLISHED\",\"ARCHIVED\",\"SELECTED\"]"
+                  "defaultValue": "[\"DRAFT\", \"PUBLISHED\", \"ARCHIVED\", \"SELECTED\"]"
                 },
                 {
                   "name": "limit",
@@ -956,7 +979,7 @@
                       "ofType": null
                     }
                   },
-                  "defaultValue": "[\"DRAFT\",\"PUBLISHED\",\"ARCHIVED\",\"SELECTED\"]"
+                  "defaultValue": "[\"DRAFT\", \"PUBLISHED\", \"ARCHIVED\", \"SELECTED\"]"
                 },
                 {
                   "name": "kind",
@@ -970,7 +993,7 @@
                       "ofType": null
                     }
                   },
-                  "defaultValue": "[\"DEFAULT\",\"CANONICAL\"]"
+                  "defaultValue": "[\"DEFAULT\", \"CANONICAL\"]"
                 }
               ],
               "type": {
@@ -1060,6 +1083,29 @@
               "description": null,
               "args": [
 
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "updated_at",
+              "description": null,
+              "args": [
+                {
+                  "name": "format",
+                  "description": null,
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                }
               ],
               "type": {
                 "kind": "SCALAR",
@@ -1565,6 +1611,29 @@
               "deprecationReason": null
             },
             {
+              "name": "created_at",
+              "description": null,
+              "args": [
+                {
+                  "name": "format",
+                  "description": null,
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                }
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "description",
               "description": null,
               "args": [
@@ -1576,7 +1645,7 @@
                     "name": "Format",
                     "ofType": null
                   },
-                  "defaultValue": "\"PLAIN\""
+                  "defaultValue": "PLAIN"
                 }
               ],
               "type": {
@@ -1654,7 +1723,7 @@
                       "ofType": null
                     }
                   },
-                  "defaultValue": "[\"DRAFT\",\"PUBLISHED\",\"ARCHIVED\",\"SELECTED\"]"
+                  "defaultValue": "[\"DRAFT\", \"PUBLISHED\", \"ARCHIVED\", \"SELECTED\"]"
                 },
                 {
                   "name": "limit",
@@ -1735,6 +1804,29 @@
               "description": null,
               "args": [
 
+              ],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "updated_at",
+              "description": null,
+              "args": [
+                {
+                  "name": "format",
+                  "description": null,
+                  "type": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                }
               ],
               "type": {
                 "kind": "SCALAR",
@@ -1959,7 +2051,7 @@
                 "name": "Mode",
                 "ofType": null
               },
-              "defaultValue": "\"BLOCK\""
+              "defaultValue": "BLOCK"
             },
             {
               "name": "images",
