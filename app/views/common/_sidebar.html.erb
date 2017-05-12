@@ -17,14 +17,8 @@
 
     <hr>
 
-    <% sidebar.exhibitions.each do |exhibition| %>
-      <%= nav_link exhibition.title, exhibition_path(exhibition.slug), class: 'Sidebar__menu__link' %>
-    <% end %>
-
-    <hr>
-
-    <% sidebar.artworks.each do |artwork| %>
-      <%= nav_link artwork.title, artwork_path(artwork.slug), class: 'Sidebar__menu__link' %>
+    <% sidebar.links.each do |link| %>
+      <%= nav_link link.title, link.path, class: 'Sidebar__menu__link' %>
     <% end %>
   </div>
 </div>

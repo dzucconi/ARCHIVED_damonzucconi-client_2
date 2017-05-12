@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 
   def not_found(message = '')
     current_path = url_for(request.params)
-    paths = @sidebar.map { |artwork| artwork_path(artwork.slug) }
+    paths = @sidebar.links.map(&:path)
     @nearest = Nearest::Finder.new(current_path, paths)
     @message = message
 
@@ -34,6 +34,6 @@ class ApplicationController < ActionController::Base
 
   def sidebar
     artworks, exhibitions = query(SidebarQuery, {}, :artworks, :exhibitions)
-    @sidebar = Sidebar.new(artworks, exhibitions)
+    @sidebar = Sidebar::Links.new(artworks, exhibitions)
   end
 end
