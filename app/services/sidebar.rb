@@ -14,6 +14,10 @@ module Sidebar
     def score
       -([@year, @updated_at].join('').to_i)
     end
+
+    def emphasis?
+      @kind == :exhibition
+    end
   end
 
   class Links

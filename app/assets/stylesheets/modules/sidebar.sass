@@ -77,18 +77,13 @@ $sidebar: (width: (scale(1) * 18), toggle_width: scale(4))
     a,
     span
       display: block
-      color: darken(white, 50%)
+      color: gray
       padding: (scale(1) / 1.25) (scale(2) / 1.5)
       +break-word()
 
     a
       &:hover
         color: white
-
-      &[href^='/exhibitions']
-        color: gold
-        &:hover
-          color: yellow
 
     span
       background-color: white
@@ -103,11 +98,14 @@ $sidebar: (width: (scale(1) * 18), toggle_width: scale(4))
 
     &__link
       &--clicked
-        background-color: white
+        background-color: white !important
         color: black !important
 
       &--deactivating
         background-color: gray !important
+
+      &--emphasis
+        text-decoration: underline
 
   &--open
     .Sidebar__supplemental
