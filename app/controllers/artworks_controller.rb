@@ -1,6 +1,6 @@
 class ArtworksController < ApplicationController
   def index
-    params.reverse_merge!(state: ['SELECTED', 'PUBLISHED'])
+    params.reverse_merge!(state: %w[SELECTED PUBLISHED])
 
     @artworks = query(ArtworksIndexQuery, { state: params.require(:state).map(&:upcase) }, :artworks)
   end

@@ -32,20 +32,20 @@ module Nearest
 
     class << self
       def distance(a, b)
-        [(0..a.size).to_a].tap { |mx|
+        [(0..a.size).to_a].tap do |mx|
           (1..b.size).each do |j|
-            mx << [j] + [0] * (a.size)
+            mx << [j] + [0] * a.size
           end
           (1..b.size).each do |i|
             (1..a.size).each do |j|
               mx[i][j] = if a[j - 1] == b[i - 1]
-                mx[i-1][j-1]
-              else
-                [mx[i-1][j], mx[i][j-1], mx[i-1][j-1]].min + 1
+                           mx[i - 1][j - 1]
+                         else
+                           [mx[i - 1][j], mx[i][j - 1], mx[i - 1][j - 1]].min + 1
               end
             end
           end
-        }[-1][-1]
+        end[-1][-1]
       end
     end
   end

@@ -16,7 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'webpacker', github: 'rails/webpacker'
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'capybara', '~> 2.7.0'
   gem 'foreman'
   gem 'rubocop'

@@ -12,7 +12,7 @@ module Sidebar
     end
 
     def score
-      -([@year, @updated_at].join('').to_i)
+      -[@year, @updated_at].join('').to_i
     end
 
     def emphasis?

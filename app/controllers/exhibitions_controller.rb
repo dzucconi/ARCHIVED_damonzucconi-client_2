@@ -1,6 +1,6 @@
 class ExhibitionsController < ApplicationController
   def index
-    params.reverse_merge!(state: ['SELECTED', 'PUBLISHED'])
+    params.reverse_merge!(state: %w[SELECTED PUBLISHED])
 
     @exhibitions = query(ExhibitionsIndexQuery, { state: params.require(:state).map(&:upcase) }, :exhibitions)
   end

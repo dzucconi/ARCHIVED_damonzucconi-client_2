@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   resources :representations, only: [:index]
 
-  resources :artworks, only: [:index, :show]
-  resources :exhibitions, only: [:index, :show]
+  resources :artworks, only: %i[index show]
+  resources :exhibitions, only: %i[index show]
 
   resources :index, only: [:index]
   resources :descriptions, only: [:index]
