@@ -4,4 +4,9 @@ module ApplicationHelper
       content_tag :span, title, options
     end
   end
+
+  def touch?
+    ua = request.headers['HTTP_USER_AGENT']
+    ua.present? && ua =~ /\b(Android|iPhone|iPad|Windows Phone|Opera Mobi|Kindle|BackBerry|PlayBook)\b/i
+  end
 end

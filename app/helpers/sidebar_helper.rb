@@ -1,5 +1,5 @@
 module SidebarHelper
   def sidebar_state
-    cookies[:'Sidebar--open'] == 'true' ? 'Sidebar--open' : ''
+    !touch? && cookies[:'Sidebar--open'] == 'true' ? 'Sidebar--open' : ''
   end
 end
