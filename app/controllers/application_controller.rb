@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :sidebar
 
+  caches_action :sidebar, expires_in: 24.hours
+
   class QueryExecutionError < StandardError; end
 
   unless Rails.application.config.consider_all_requests_local
