@@ -1,5 +1,10 @@
 class PagesController < ApplicationController
-  def information; end
+  def home
+  end
 
-  def subscribe; end
+  def information
+  end
+
+  def subscribe
+  end
 end

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'representations#index'
+  root to: 'pages#home'
 
   resources :representations, only: [:index]
 
