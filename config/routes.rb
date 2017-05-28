@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
+  root to: 'artworks#selected'
 
   resources :representations, only: [:index]
 
-  resources :artworks, only: %i[index show]
-  resources :exhibitions, only: %i[index show]
+  resources :artworks, only: %i[index show] do
+    collection do
+      get 'selected'
+      get 'descriptions'
+      get 'table'
+    end
+  end
 
-  resources :index, only: [:index]
-  resources :descriptions, only: [:index]
+  resources :exhibitions, only: %i[index show]
 
   get 'information' => 'pages#information'
   get 'subscribe' => 'pages#subscribe'

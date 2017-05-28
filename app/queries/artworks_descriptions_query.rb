@@ -1,4 +1,4 @@
-DescriptionsIndexQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
+ArtworksDescriptionsQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
   {
     artworks(state: [SELECTED, PUBLISHED]) {
       slug
