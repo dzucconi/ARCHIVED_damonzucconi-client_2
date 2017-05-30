@@ -8,6 +8,7 @@ class ArtworksController < ApplicationController
       scale: false
     }
 
+    @title = 'All Work'
     @artworks = query(ArtworksIndexQuery, options, :artworks)
   end
 
