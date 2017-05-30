@@ -14,8 +14,8 @@ class ArtworksController < ApplicationController
   def selected
     options = {
       state: %w[SELECTED],
-      width: 375,
-      height: 375,
+      width: 275,
+      height: 275,
       scale: true
     }
 
