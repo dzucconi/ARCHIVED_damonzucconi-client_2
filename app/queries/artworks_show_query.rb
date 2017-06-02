@@ -16,6 +16,13 @@ ArtworksShowQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
       }
       material
       duration
+      image: images(state: PUBLISHED, limit: 1) {
+        resized(width: 1200, height: 630) {
+          urls {
+            _1x
+          }
+        }
+      }
       images(state: PUBLISHED) {
         width
         height

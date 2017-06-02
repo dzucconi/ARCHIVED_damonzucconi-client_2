@@ -7,11 +7,13 @@
     <meta name='apple-mobile-web-app-capable' content='yes'>
     <meta name='apple-mobile-web-app-status-bar-style' content='black'>
 
+    <%= csrf_meta_tags %>
+    <%= content_for :meta %>
+
     <link rel='icon' href='/favicon.ico'>
 
     <title><%= [content_for(:title), 'Damon Zucconi'].compact.join(' / ') %></title>
 
-    <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 

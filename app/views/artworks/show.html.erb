@@ -1,5 +1,30 @@
 <%= content_for :title { @artwork.title.html_safe } %>
 
+<%= content_for :meta do %>
+  <meta property='og:title' content='<%= @artwork.title %> (<%= @artwork.year %>), Damon Zucconi'>
+  <meta name='twitter:site' content='@dzucconi'>
+  <meta name='twitter:creator' content='@dzucconi'>
+
+  <% if @artwork.description %>
+    <meta name='description' content='<%= @artwork.description %>'>
+    <meta property='og:description' content='<%= @artwork.description %>'>
+    <meta property='twitter:description' content='<%= @artwork.description %>'>
+  <% end %>
+
+  <% if @artwork.image.size.positive? %>
+    <% image = @artwork.image.first %>
+    <meta property='og:image' content='<%= image.resized.urls._1x %>'>
+    <meta name='twitter:image' content='<%= image.resized.urls._1x %>'>
+  <% end %>
+
+  <% if @artwork.src %>
+    <link rel='canonical' href='<%= @artwork.src %>'>
+    <meta property='og:url' content='<%= @artwork.src %>'>
+  <% end %>
+
+  <meta property='twitter:card' content='summary_large_image'>
+<% end %>
+
 <div class='Artwork'>
   <% case @artwork.intent %>
   <% when 'canonical' %>
