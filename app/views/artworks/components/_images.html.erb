@@ -1,4 +1,4 @@
-<% if artwork.images.size > 0 %>
+<% if artwork.images.size.positive? %>
   <div class='Images'>
     <% artwork.images.each do |image| %>
       <%= render 'common/picture',

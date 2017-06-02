@@ -18,13 +18,15 @@
     <hr>
 
     <% sidebar.artworks.each do |link| %>
-      <%= nav_link link.title, link.path, class: "Sidebar__menu__link Sidebar__menu__link--#{link.emphasis? ? 'emphasis' : 'default'}" %>
+      <%= nav_link link.title, link.path,
+        class: "Sidebar__menu__link Sidebar__menu__link--#{link.emphasis? ? 'emphasis' : 'default'}" %>
     <% end %>
 
     <hr>
 
     <% sidebar.exhibitions.each do |link| %>
-      <%= nav_link link.title, link.path, class: "Sidebar__menu__link Sidebar__menu__link--#{link.emphasis? ? 'emphasis' : 'default'}" %>
+      <%= nav_link link.title, link.path,
+        class: "Sidebar__menu__link Sidebar__menu__link--#{link.emphasis? ? 'emphasis' : 'default'}" %>
     <% end %>
   </div>
 </div>

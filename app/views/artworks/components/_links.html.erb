@@ -1,4 +1,4 @@
-<% if artwork.links.size > 0 %>
+<% if artwork.links.size.positive? %>
   <div class='ArtworkLinks'>
     <% artwork.links.each do |link| %>
       <%= link_to link.title, link.url, target: '_blank' %>

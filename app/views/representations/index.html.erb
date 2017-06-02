@@ -3,9 +3,9 @@
 <div class='Representations'>
   <% @representations.each do |representation| %>
     <%= link_to representation.url,
-      class: "Representation Representation--#{path_type(representation.url)} Representation--#{representation.mode} Representation--#{representation.images.size > 0 ? 'images' : 'text'}",
+      class: "Representation Representation--#{path_type(representation.url)} Representation--#{representation.mode} Representation--#{representation.images.size.positive? ? 'images' : 'text'}",
       target: target(representation.url) do %>
-      <% if representation.images.size > 0 %>
+      <% if representation.images.size.positive? %>
         <% representation.images.each do |image| %>
           <span class='Representation__image'>
             <picture>

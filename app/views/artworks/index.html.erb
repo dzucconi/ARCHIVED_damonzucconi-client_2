@@ -5,7 +5,7 @@
 <div class='Artworks'>
   <% @artworks.each do |artwork| %>
     <%= link_to artwork_path(artwork.slug), class: "Artworks__artwork #{artwork.state == 'selected' ? 'Artworks__artwork--selected' : ''}" do %>
-      <% if artwork.images.size > 0 %>
+      <% if artwork.images.size.positive? %>
         <% artwork.images.each do |image| %>
           <picture class='Artworks__artwork__image'>
             <source

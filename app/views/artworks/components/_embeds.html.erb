@@ -1,4 +1,4 @@
-<% if artwork.embeds.size > 0 %>
+<% if artwork.embeds.size.positive? %>
   <div class='ArtworkEmbeds'>
     <% artwork.embeds.each do |embed| %>
       <%= embed.html.html_safe %>

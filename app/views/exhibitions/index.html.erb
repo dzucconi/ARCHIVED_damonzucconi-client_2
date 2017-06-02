@@ -5,7 +5,7 @@
 <div class='Exhibitions'>
   <% @exhibitions.each do |exhibition| %>
     <%= link_to exhibition_path(exhibition.slug), class: 'Exhibitions__exhibition' do %>
-      <% if exhibition.images.size > 0 %>
+      <% if exhibition.images.size.positive? %>
         <% exhibition.images.each do |image| %>
           <picture class='Exhibitions__exhibition__image'>
             <source

@@ -1,4 +1,4 @@
-<% if exhibition.images.size > 0 %>
+<% if exhibition.images.size.positive? %>
   <div class='Images'>
     <% exhibition.images.each do |image| %>
       <%= render 'common/picture',
