@@ -1,0 +1,37 @@
+@import 'common'
+
+.CV
+  font-size: $fontSize
+  line-height: $lineHeight
+
+  h2,
+  h3
+    margin: 0
+
+.CVCategory
+  +collapsed-margins(lines(1))
+
+.CVYears
+  margin-top: -(lines(1))
+  margin-left: 15em
+
+.CVYear
+  //
+
+.CVRows
+  margin-top: -(lines(1))
+
+.CVRow
+  margin-left: 4em
+
+@media (max-width: 1024px)
+  .CVYears
+    margin-top: lines(1)
+    margin-left: 0
+
+@media (max-width: 768px)
+  .CVRows
+    margin: lines(1) 0
+
+  .CVRow
+    margin-left: 0

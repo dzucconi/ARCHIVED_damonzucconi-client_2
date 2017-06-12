@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   get 'information' => 'pages#information'
   get 'subscribe' => 'pages#subscribe'
+  get 'cv' => 'pages#cv'
 
   get '*path', to: 'errors#not_found', via: :all
 end
