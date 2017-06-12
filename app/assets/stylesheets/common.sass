@@ -2,6 +2,7 @@
 $scale: 8px 16px 32px 64px 128px 256px 512px
 $sizes: 12px 14px 16px
 $lineHeight: 1.33
+$fontSize: 14px
 
 $z: (iframe: 1, canonical: 10, sidebar: 100, zoomer: 1000)
 
@@ -51,6 +52,9 @@ $purple: #636
 
 @function size($size)
   @return nth($sizes, $size)
+
+@function lines($n)
+  @return floor(($fontSize * $lineHeight) * $n)
 
 $mobileBreakpoint: 600px
 
