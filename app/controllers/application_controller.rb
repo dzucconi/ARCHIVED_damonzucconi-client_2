@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
 
   def not_found(message = '')
     current_path = url_for(request.params)
-    paths = @sidebar.links.map(&:path)
+    paths = @sidebar.artworks.concat(@sidebar.exhibitions).map(&:path)
     @nearest = Nearest::Finder.new(current_path, paths)
     @message = message
 
