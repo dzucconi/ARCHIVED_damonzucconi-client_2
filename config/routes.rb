@@ -13,9 +13,14 @@ Rails.application.routes.draw do
 
   resources :exhibitions, only: %i[index show]
 
+  # Static pages
   get 'information' => 'pages#information'
   get 'subscribe' => 'pages#subscribe'
   get 'cv' => 'pages#cv'
 
+  # Redirect old, known routes
+  get '/show/:id', to: redirect('/artworks/%{id}')
+
+  # Finally, deal with 404s
   get '*path', to: 'errors#not_found', via: :all
 end
