@@ -3,7 +3,7 @@
 <div class='Descriptions'>
   <% @artworks.each do |artwork| %>
     <div class='Description'>
-      <%= link_to artwork.description || 'Undescribed', artwork_path(artwork.slug) %>
+      <%= link_to artwork.gloss || artwork.description || 'Undescribed', artwork_path(artwork.slug) %>
     </div>
   <% end %>
 </div>
