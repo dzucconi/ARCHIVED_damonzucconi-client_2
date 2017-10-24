@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   root to: 'artworks#selected'
 
-  resources :representations, only: [:index]
-
   resources :artworks, only: %i[index show] do
     collection do
       get 'selected'
