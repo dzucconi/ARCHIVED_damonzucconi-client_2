@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   root to: 'artworks#selected'
 
-  resources :representations, only: [:index]
-
   resources :artworks, only: %i[index show] do
     collection do
       get 'selected'
@@ -12,6 +10,8 @@ Rails.application.routes.draw do
   end
 
   resources :exhibitions, only: %i[index show]
+
+  resources :documentation, only: %[index]
 
   # Static pages
   get 'information' => 'pages#information'

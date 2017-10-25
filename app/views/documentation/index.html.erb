@@ -1,0 +1,35 @@
+<%= content_for :title { @title } %>
+
+<%= render 'common/top_nav' %>
+
+<div class='Documentation'>
+  <% @artworks.each do |artwork| %>
+    <div class='DocumentedArtwork'>
+      <div class='DocumentedArtwork__documentation'>
+        <% artwork.images.each do |image| %>
+          <%= link_to image.url, target: '_blank', class: 'DocumentedArtwork__thumbnail' do %>
+            <picture>
+              <source
+                media='(min-width: <%= image.thumb.width %>px)'
+                srcset='<%= image.thumb.urls._1x %> 1x, <%= image.thumb.urls._2x %> 2x'>
+              <img
+                src='<%= image.thumb.urls._1x %>'
+                alt='<%= artwork.title %>'
+                title='<%= artwork.title %>'
+                width='<%= image.thumb.width %>'
+                height='<%= image.thumb.height %>'>
+            </picture>
+
+            <span>
+              <%= image.width %> × <%= image.height %>
+            </span>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class='DocumentedArtwork__tombstone'>
+        <%= render 'artworks/components/tombstone', artwork: artwork %>
+      </div>
+    </div>
+  <% end %>
+</div>
