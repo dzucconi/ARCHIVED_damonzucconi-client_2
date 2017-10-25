@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   resources :exhibitions, only: %i[index show]
 
+  resources :documentation, only: %[index]
+
   # Static pages
   get 'information' => 'pages#information'
   get 'subscribe' => 'pages#subscribe'

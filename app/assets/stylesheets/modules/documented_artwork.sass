@@ -1,0 +1,30 @@
+@import 'common'
+
+.DocumentedArtwork
+  margin: 0 0 scale(5) 0
+
+  &__documentation
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    padding: 0 scale(4)
+
+  &__thumbnail
+    position: relative
+    display: inline-block
+    margin: scale(2)
+    border: 1px solid $blue
+
+    > span
+      position: absolute
+      right: 0
+      bottom: 0
+      padding: (scale(1) / 2) scale(1)
+      line-height: 1
+      color: white
+      background-color: $blue
+      font-size: size(1)
+
+  &__tombstone
+    //
