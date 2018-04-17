@@ -10,18 +10,16 @@ gem 'actionpack-action_caching'
 gem 'autoprefixer-rails'
 gem 'graphql-client'
 gem 'puma', '~> 3.7'
-gem 'rails', '~> 5.1.0'
+gem 'rails', '~> 5.2.0'
 gem 'sass-rails', github: 'rails/sass-rails'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
-gem 'webpacker', github: 'rails/webpacker'
+gem 'webpacker', '~> 3.4'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'capybara', '~> 2.7.0'
   gem 'foreman'
   gem 'rubocop'
-  gem 'selenium-webdriver'
 end
 
 group :development do
