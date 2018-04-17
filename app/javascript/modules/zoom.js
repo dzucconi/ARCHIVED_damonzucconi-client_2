@@ -11,10 +11,10 @@ const bind = picture => {
 
     const el = dom.tag('div', { klass: 'Zoomer' }, `
       <div class='Zoomer__close js-close'></div>
-      <div class='Zoomer__indicator js-indicator'></div>
     `);
 
     document.body.appendChild(el);
+    document.body.setAttribute('data-state', 'loading');
 
     let viewer = OpenSeadragon({
       element: el,
@@ -37,7 +37,7 @@ const bind = picture => {
     });
 
     viewer.addHandler('tile-loaded', () => {
-      el.querySelector('.js-indicator').style.display = 'none';
+      document.body.setAttribute('data-state', 'resting');
     });
 
     const close = () => {

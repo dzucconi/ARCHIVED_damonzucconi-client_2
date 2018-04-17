@@ -15,13 +15,11 @@ const init = () => {
 
   const loading = Array.prototype.map.call(imgs, bind);
 
-  const indicator = dom.tag('div', { klass: 'Indicator' });
-
-  document.body.appendChild(indicator);
+  document.body.setAttribute('data-state', 'loading');
 
   Promise.all(loading)
     .then(() => {
-      indicator.parentNode.removeChild(indicator);
+      document.body.setAttribute('data-state', 'resting');
     });
 };
 
