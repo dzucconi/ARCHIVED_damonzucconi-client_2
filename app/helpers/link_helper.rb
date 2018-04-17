@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module LinkHelper
   def is_absolute?(url)
     URI.parse(url).absolute?

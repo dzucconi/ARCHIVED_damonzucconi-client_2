@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ExhibitionsShowQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
   query($id: ID!) {
     exhibition(id: $id) {

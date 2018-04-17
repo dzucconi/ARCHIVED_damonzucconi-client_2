@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Object
   def values_at(*attributes)
     if attributes.size == 1

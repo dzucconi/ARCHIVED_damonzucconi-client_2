@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 SidebarQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
   {
     artworks(state: [SELECTED, PUBLISHED]) {

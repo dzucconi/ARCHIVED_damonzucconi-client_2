@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Sidebar
   class Link
     attr_reader :title

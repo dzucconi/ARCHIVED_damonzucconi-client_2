@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ArtworksTableQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
   {
     artworks(state: [SELECTED, PUBLISHED]) {

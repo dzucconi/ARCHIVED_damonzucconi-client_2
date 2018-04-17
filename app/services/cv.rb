@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CV
   class Row
     def initialize(struct)
@@ -47,14 +49,14 @@ module CV
           [
             type.last.first.category,
             type.last.group_by(&:year)
-              .to_a
-              .sort_by { |year| -year.first.to_i }
-              .map do |year|
-                [
-                  year.first,
-                  year.last.sort_by { |row| -row.timestamp }
-                ]
-              end
+                .to_a
+                .sort_by { |year| -year.first.to_i }
+                .map do |year|
+              [
+                year.first,
+                year.last.sort_by { |row| -row.timestamp }
+              ]
+            end
           ]
         end
     end

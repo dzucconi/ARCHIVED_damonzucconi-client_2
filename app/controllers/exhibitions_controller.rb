@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ExhibitionsController < ApplicationController
   caches_action :index, expires_in: 24.hours
 

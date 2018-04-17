@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   def nav_link(title, path, options = {})
     link_to_unless_current title, path, options do

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ArtworksController < ApplicationController
   def index
     params.reverse_merge!(state: %w[SELECTED PUBLISHED])
