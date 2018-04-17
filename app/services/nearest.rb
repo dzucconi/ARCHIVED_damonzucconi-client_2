@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Nearest
   class Scored
     attr_reader :path, :distance

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ArtworksShowQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
   query($id: ID!) {
     artwork(id: $id) {

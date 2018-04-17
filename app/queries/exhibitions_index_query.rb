@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ExhibitionsIndexQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
   query($state: [State]) {
     exhibitions(state: $state) {

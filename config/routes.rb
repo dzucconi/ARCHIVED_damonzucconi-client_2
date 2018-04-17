@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root to: 'artworks#selected'
 
@@ -11,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :exhibitions, only: %i[index show]
 
-  resources :documentation, only: %[index]
+  resources :documentation, only: %(index)
 
   # Static pages
   get 'information' => 'pages#information'
