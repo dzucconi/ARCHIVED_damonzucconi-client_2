@@ -26,6 +26,12 @@
     <%= artwork.year %>
   </div>
 
+  <% if artwork.collector_byline %>
+    <div class='ArtworkTombstone__collector-byline'>
+      <%= artwork.collector_byline %>
+    </div>
+  <% end %>
+
   <% if artwork.description %>
     <div class='ArtworkTombstone__description'>
       <%= artwork.description.html_safe %>
