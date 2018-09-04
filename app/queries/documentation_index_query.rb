@@ -16,6 +16,7 @@ DocumentationIndexQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
       }
       material
       duration
+      collector_byline
       src
       images(state: PUBLISHED) {
         url
