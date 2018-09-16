@@ -1,0 +1,16 @@
+@import 'common'
+
+.Websites
+  text-align: center
+  padding: 0 scale(3) scale(3) scale(3)
+
+  &__url
+    +collapsed-margins(scale(1))
+    +hyphenate
+
+    > a
+      display: block
+      color: $blue
+
+      &:hover
+        text-decoration: underline

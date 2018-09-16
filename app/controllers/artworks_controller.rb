@@ -38,4 +38,14 @@ class ArtworksController < ApplicationController
   def show
     @artwork = query(ArtworksShowQuery, { id: params.require(:id) }, :artwork)
   end
+
+  def websites
+    options = { state: %w[SELECTED PUBLISHED] }
+    artworks = query(ArtworksWebsitesQuery, options, :artworks)
+
+    @urls = artworks
+            .map(&:links)
+            .flatten.select { |link| link.kind == 'canonical' }
+            .map(&:url)
+  end
 end

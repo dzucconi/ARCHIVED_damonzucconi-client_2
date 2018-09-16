@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       get 'selected'
       get 'descriptions'
       get 'table'
+      get 'websites'
     end
   end
 

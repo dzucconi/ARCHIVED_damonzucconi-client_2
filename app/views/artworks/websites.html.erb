@@ -1,0 +1,11 @@
+<%= render 'common/top_nav' %>
+
+<div class='Websites'>
+  <% @urls.each do |url| %>
+    <div class='Websites__url'>
+      <% prettify_url(url.gsub('work.damonzucconi.com', '…')).tap do |label| %>
+        <%= link_to label, url, target: '_blank' %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
