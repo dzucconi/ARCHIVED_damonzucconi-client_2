@@ -15,6 +15,7 @@ module LinkHelper
 
   def prettify_url(url)
     x = url.gsub(%r{https?://}, '')
+    x = x.gsub('work.damonzucconi.com', '…')
     x = x.chomp('/')
     x
   end
