@@ -1,15 +1,15 @@
-<% content_for :sidebar do %>
-  <div class='AdditionalInfo'>
-    <a class='AdditionalInfo__toggle'>
-      <span></span>
+<div class='ArtworkCanonical'>
+    <a
+      href='<%= artwork.src %>'
+      target='_blank'
+    >
+      Click here if new tab doesn’t open automatically
     </a>
 
-    <div class='AdditionalInfo__dropdown'>
-      <%= render 'artworks/components/tombstone', artwork: artwork %>
-    </div>
-  </div>
-<% end %>
-
-<div class='ArtworkCanonical'>
-  <iframe src='<%= artwork.src %>' title='<%= artwork.title %>'></iframe>
+  <script>
+      const newTab = window.open('<%= artwork.src %>', '_blank')
+      newTab.focus();
+  </script>
 </div>
+
+<%= render 'artworks/components/tombstone', artwork: artwork %>
