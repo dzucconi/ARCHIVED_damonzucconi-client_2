@@ -1,4 +1,6 @@
-<%= content_for :title { @title } %>
+<% content_for :title do %>
+  <%= @title %>
+<% end %>
 
 <%= render 'common/top_nav' %>
 
