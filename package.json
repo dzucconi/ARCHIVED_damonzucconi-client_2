@@ -2,12 +2,11 @@
   "name": "damonzucconi-client",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.4",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@rails/webpacker": "^4.0.7",
     "autoprefixer": "^6.7.7",
-    "babel-core": "^6.24.1",
-    "babel-loader": "7.1.2",
-    "babel-preset-env": "^1.4.0",
-    "babel-preset-latest": "^6.24.0",
+    "babel-loader": "^8.0.0",
     "coffee-loader": "^0.7.3",
     "coffee-script": "^1.12.5",
     "compression-webpack-plugin": "^0.4.0",
@@ -27,11 +26,12 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.16.1",
     "turbolinks": "^5.0.0",
-    "webpack": "^3.6.0",
+    "webpack": "^4.35.0",
     "webpack-manifest-plugin": "^1.1.0",
     "webpack-merge": "^4.1.0"
   },
   "devDependencies": {
-    "webpack-dev-server": "3.1.11"
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
   }
 }
