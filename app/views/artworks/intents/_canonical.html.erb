@@ -7,8 +7,10 @@
     </a>
 
   <script>
-      const newTab = window.open('<%= artwork.src.html_safe %>', '_blank')
-      newTab.focus();
+      (function() {
+        const newTab = window.open('<%= artwork.src.html_safe %>', '_blank');
+        newTab.focus();
+      }());
   </script>
 </div>
 
