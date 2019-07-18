@@ -1,6 +1,6 @@
 # damonzucconi-client
 
-Personal website. Public-facing, front-end client to the damonzucconi-api GraphQL endpoint
+Personal website. Public-facing, front-end client to the [damonzucconi-api](https://github.com/dzucconi/damonzucconi-api) GraphQL endpoint
 
 ## Meta
 * **State**: production
