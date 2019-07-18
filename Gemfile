@@ -16,7 +16,7 @@ gem 'rails', '~> 5.2.0'
 gem 'sass-rails', github: 'rails/sass-rails'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
-gem 'webpacker', '~> 4.0', '>= 4.0.7'
+gem 'webpacker', '~> 4.x'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
