@@ -11,7 +11,7 @@ end
 gem 'actionpack-action_caching'
 gem 'autoprefixer-rails'
 gem 'graphql-client'
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 3.12'
 gem 'rails', '~> 5.2.0'
 gem 'sass-rails', github: 'rails/sass-rails'
 gem 'turbolinks', '~> 5'
