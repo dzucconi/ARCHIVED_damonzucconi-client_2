@@ -2,7 +2,7 @@
   "name": "damonzucconi-client",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "4.0.7",
+    "@rails/webpacker": "4.2.2",
     "js-cookie": "2.2.1",
     "openseadragon": "2.4.1",
     "turbolinks": "5.2.0"
