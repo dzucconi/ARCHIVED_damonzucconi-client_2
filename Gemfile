@@ -10,13 +10,18 @@ end
 
 gem 'actionpack-action_caching'
 gem 'autoprefixer-rails'
-gem 'graphql-client'
 gem 'puma', '~> 3.12'
 gem 'rails', '~> 5.2.0'
 gem 'sass-rails', github: 'rails/sass-rails'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 gem 'webpacker', '~> 4.x'
+
+# TODO: Investigate:
+# Updating graphql-client causes problems with its underlying graphql dependency
+# Versions are pinned for this reason
+gem 'graphql', '1.9.7'
+gem 'graphql-client', '0.14.0'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
