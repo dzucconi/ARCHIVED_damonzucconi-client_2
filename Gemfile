@@ -15,7 +15,7 @@ gem 'rails', '~> 5.2.0'
 gem 'sass-rails', github: 'rails/sass-rails'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
-gem 'webpacker', '~> 4.x'
+gem 'webpacker', '~> 5.0'
 
 # TODO: Investigate:
 # Updating graphql-client causes problems with its underlying graphql dependency
