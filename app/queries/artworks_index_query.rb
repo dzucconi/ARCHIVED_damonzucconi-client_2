@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 ArtworksIndexQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
-  query($state: [State], $width: Int, $height: Int, $scale: Boolean) {
+  query($state: [State], $width: Int, $height: Int, $scale: Float) {
     artworks(state: $state) {
       slug
       title

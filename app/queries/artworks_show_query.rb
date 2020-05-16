@@ -30,7 +30,7 @@ ArtworksShowQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
         width
         height
         url
-        mobile: resized(width: 375, scale: false) {
+        mobile: resized(width: 375, scale: 1.0) {
           height
           width
           urls {
@@ -38,7 +38,7 @@ ArtworksShowQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
             _2x
           }
         }
-        small: resized(width: 375, height: 375, scale: true) {
+        small: resized(width: 375, height: 375, scale: 1.0) {
           height
           width
           urls {
@@ -46,7 +46,7 @@ ArtworksShowQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
             _2x
           }
         }
-        medium: resized(width: 750, height: 750, scale: true) {
+        medium: resized(width: 750, height: 750, scale: 1.0) {
           height
           width
           urls {
@@ -54,7 +54,7 @@ ArtworksShowQuery = DamonZucconiAPI::Client.parse <<-'GRAPHQL'
             _2x
           }
         }
-        large: resized(width: 1125, height: 1125, scale: true) {
+        large: resized(width: 1125, height: 1125, scale: 1.0) {
           height
           width
           urls {

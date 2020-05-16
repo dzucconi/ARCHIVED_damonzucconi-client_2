@@ -7,7 +7,7 @@ class ArtworksController < ApplicationController
       state: params.require(:state).map(&:upcase),
       width: 200,
       height: 200,
-      scale: false
+      scale: 1.0
     }
 
     @title = 'Archive'
@@ -19,7 +19,7 @@ class ArtworksController < ApplicationController
       state: %w[SELECTED],
       width: 275,
       height: 275,
-      scale: true
+      scale: 1.0
     }
 
     @artworks = query(ArtworksIndexQuery, options, :artworks)

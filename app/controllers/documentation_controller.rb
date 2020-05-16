@@ -7,7 +7,7 @@ class DocumentationController < ApplicationController
       state: params.require(:state).map(&:upcase),
       width: 200,
       height: 200,
-      scale: false
+      scale: 1.0
     }
 
     @title = 'Documentation'
