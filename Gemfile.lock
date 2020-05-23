@@ -97,7 +97,7 @@ GEM
     parallel (1.19.1)
     parser (2.7.1.2)
       ast (~> 2.4.0)
-    puma (3.12.4)
+    puma (3.12.6)
     rack (2.2.2)
     rack-proxy (0.6.5)
       rack
